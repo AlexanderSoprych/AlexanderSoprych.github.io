@@ -36,31 +36,21 @@ h1  {
 <body>
   <section>
   <h1>Section One</h1>
+  <video height="720" autoplay>
+    <source src="mKrólik_Portfolio_Web_Short.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 </section>
-<section>
+<section style="background-color: powderblue;">
     <h1>Section Two</h1>
 </section>
 <section>
     <h1>Section Three</h1>
 </section>
-<section>
+<section style="background-color: orange;">
     <h1>Section Four</h1>
 </section>
-<section>
+<section style="background-color: tomato;">
     <h1>Section Five</h1>
 </section>
   </body>
-
-<script>
-  const gra = function(min, max) {
-    return Math.random() * (max - min) + min;
-}
-const init = function(){
-  let items = document.querySelectorAll('section');
-  for (let i = 0; i < items.length; i++){
-    items[i].style.background = randomColor({luminosity: 'light'});
-  }
-  cssScrollSnapPolyfill()
-}
-init();
-</script>
