@@ -58,6 +58,16 @@ img {
 .afterImage img {
   transform: translate(-100%, 0px);
 }
+}
+.afterafterImage {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  transform: translate(100%, 0px);
+}
+.afterafterImage img {
+  transform: translate(-100%, 0px);
+}
 .comparisonImage img {
   width: 100%;
   height: 100%;
@@ -92,6 +102,9 @@ img {
     </div>
   <div class="comparisonImage afterImage">
     <img src="Ruttungsboje_1.png" alt="Open">
+  </div>
+  <div class="comparisonImage afterafterImage">
+    <img src="Low_Poly_Panther_Final_2.2.png" alt="Open">
   </div>
 </section>
 
@@ -137,8 +150,9 @@ gsap.utils.toArray(".comparisonSection").forEach(section => {
 		});
 	// animate the container one way...
 	tl.fromTo(section.querySelector(".afterImage"), { xPercent: 100, x: 0}, {xPercent: 0})
-	  // ...and the image the opposite way (at the same time)
+	tl.fromTo(section.querySelector(".afterafterImage"), { xPercent: 100, x: 0}, {xPercent: 0})
 	  .fromTo(section.querySelector(".afterImage img"), {xPercent: -100, x: 0}, {xPercent: 0}, 0);
+      .fromTo(section.querySelector(".afterafterImage img"), {xPercent: -100, x: 0}, {xPercent: 0}, 0);
 });
 
 </script>
