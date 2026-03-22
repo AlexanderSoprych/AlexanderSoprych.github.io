@@ -5,43 +5,31 @@
   <link rel="icon" href="new_alpha_icon.png">
 </head>
 <style>
-  * {
-  box-sizing: border-box;
-}
-.welcome-container {
-  background-color: #f1f1f1;
-  padding: 30px;
-  text-align: center;
-}
-.header {
-  position: sticky;
-  top: 0;
-  padding: 10px 16px;
-  color: orange;
-}
-.content {
-  padding: 16px;
-}
-html {
-  font-family: sans-serif;
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(100vh);
-  scroll-snap-type: y proximity;
-}
 section {
-  height: 100vh;
-  text-align: center;
   position: relative;
-}
-.panel {
-  height: 100vh;
-  text-align: center;
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 a{
   text-decoration: none;
   color: ghostwhite;
 }
-h1  {
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+h1 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -79,13 +67,15 @@ video {
 <br>
 
 <section class="panel purple" style="background-color: orange;">
-  <h2 class="panel__number">1</h2>
+  <a href="Królik_Main.html"><h1>Desert Tigers</a></h1>
+    <img src="Studio_2_Project_4_Final_1.png" alt="Desert Tigers">
 </section>
 <section class="panel" style="hbackground-color: MediumSeaGreen;">
   <h2 class="panel__number">2</h2>
 </section>
 <section class="panel green" style="background-color: powderblue;">
-  <h2 class="panel__number">3</h2>
+  <a href="Królik_Main.html"><h1>Desert Tigers</a></h1>
+    <img src="Studio_2_Project_4_Final_1.png" alt="Desert Tigers">
 </section>
 <section class="panel">
   <h2 class="panel__number" style="background-color: tomato;">4</h2>
@@ -114,6 +104,7 @@ video {
     <h1>Section Five</h1>
 </section>
   </body>
+
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 
