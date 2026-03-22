@@ -108,7 +108,7 @@ ScrollTrigger.create({
           snapScroll = gsap.utils.snap(panelStarts, self.scroll()); // find the closest one
       return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll); // snapping requires a progress value, so convert the scroll position into a normalized progress value between 0 and 1
     },
-    duration: 0.5
+    duration: 0.75
   }
 });
 });
