@@ -73,6 +73,22 @@ video {
   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </p>
 <br>
+
+<section class="panel purple">
+  <h2 class="panel__number">1</h2>
+</section>
+<section class="panel" style="height: 220vh">
+  <h2 class="panel__number">2</h2>
+</section>
+<section class="panel green" style="height: 50vh">
+  <h2 class="panel__number">3</h2>
+</section>
+<section class="panel">
+  <h2 class="panel__number">4</h2>
+</section>
+
+ <br>
+  
   <section style="background-color: black;">
   <h1>Section One</h1>
   <video controls autoplay loop>
@@ -94,3 +110,38 @@ video {
     <h1>Section Five</h1>
 </section>
   </body>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+
+<script>
+ document.addEventListener("DOMContentLoaded", (event) => {
+
+gsap.registerPlugin(ScrollTrigger)
+let panels = gsap.utils.toArray(".panel");
+// we'll create a ScrollTrigger for each panel just to track when each panel's top hits the top of the viewport (we only need this for snapping)
+let tops = panels.map(panel => ScrollTrigger.create({trigger: panel, start: "top top"}));
+
+panels.forEach((panel, i) => {
+  ScrollTrigger.create({
+    trigger: panel,
+    start: () => panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", // if it's shorter than the viewport, we prefer to pin it at the top
+    pin: true, 
+    pinSpacing: false 
+  });
+});
+
+ScrollTrigger.create({
+  snap: {
+    snapTo: (progress, self) => {
+      let panelStarts = tops.map(st => st.start), // an Array of all the starting scroll positions. We do this on each scroll to make sure it's totally responsive. Starting positions may change when the user resizes the viewport
+          snapScroll = gsap.utils.snap(panelStarts, self.scroll()); // find the closest one
+      return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll); // snapping requires a progress value, so convert the scroll position into a normalized progress value between 0 and 1
+    },
+    duration: 0.5
+  }
+});
+});
+
+</script>
