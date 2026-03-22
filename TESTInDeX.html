@@ -8,6 +8,20 @@
   * {
   box-sizing: border-box;
 }
+.welcome-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+.header {
+  position: sticky;
+  top: 0;
+  padding: 10px 16px;
+  color: orange;
+}
+.content {
+  padding: 16px;
+}
 html {
   font-family: sans-serif;
   scroll-snap-type: mandatory;
@@ -40,6 +54,15 @@ video {
 }
 </style>
 <body>
+
+<div class="welcome-container">
+  <h1>Scroll Down</h1>
+  <p>Scroll down to see the sticky effect.</p>
+</div>
+
+<div class="header" id="signatureMenu">
+  <h2>Alexander Soprych</h2>
+</div>
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -47,9 +70,9 @@ video {
   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </p>
 <br>
-  <section>
+  <section style="background-color: black;">
   <h1>Section One</h1>
-  <video autoplay>
+  <video controls autoplay loop>
     <source src="Królik_Portfolio_Web_Short.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
@@ -58,7 +81,7 @@ video {
     <h1>Section Two</h1>
 </section>
 <section>
-    <h1>Desert Tigers<a href="Królik_Main.html"></a></h1>
+    <a href="Królik_Main.html"><h1>Desert Tigers</a></h1>
     <img src="Studio_2_Project_4_Final_1.png" alt="Desert Tigers">
 </section>
 <section style="background-color: orange;">
