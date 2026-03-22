@@ -116,28 +116,8 @@ img {
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
 
 <script>
-document.addEventListener("DOMContentLoaded", (event) => {
-
-gsap.registerPlugin(ScrollTrigger)
-let panels = gsap.utils.toArray(".panel");
-// we'll create a ScrollTrigger for each panel just to track when each panel's top hits the top of the viewport (we only need this for snapping)
-let tops = panels.map(panel => ScrollTrigger.create({trigger: panel, start: "top top"}));
-
-panels.forEach((panel, i) => {
-  ScrollTrigger.create({
-    trigger: panel,
-    start: () => panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", // if it's shorter than the viewport, we prefer to pin it at the top
-    end: "bottom",
-    scrub: true,
-    pin: true, 
-    pinSpacing: false 
-  });
-	// animate the container one way...
-	tl.fromTo(section.querySelector(".afterImage"), { xPercent: 100, x: 0}, {xPercent: 0})
-	  // ...and the image the opposite way (at the same time)
-	  .fromTo(section.querySelector(".afterImage img"), {xPercent: -100, x: 0}, {xPercent: 0}, 0);
-});
-  let tl = gsap.timeline({
+gsap.utils.toArray(".comparisonSection").forEach(section => {
+	let tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: section,
 				start: "center center",
@@ -149,18 +129,10 @@ panels.forEach((panel, i) => {
 			},
 			defaults: {ease: "none"}
 		});
-});
-
-ScrollTrigger.create({
-  snap: {
-    snapTo: (progress, self) => {
-      let panelStarts = tops.map(st => st.start), // an Array of all the starting scroll positions. We do this on each scroll to make sure it's totally responsive. Starting positions may change when the user resizes the viewport
-          snapScroll = gsap.utils.snap(panelStarts, self.scroll()); // find the closest one
-      return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll); // snapping requires a progress value, so convert the scroll position into a normalized progress value between 0 and 1
-    },
-    duration: 0.75
-  }
-});
+	// animate the container one way...
+	tl.fromTo(section.querySelector(".afterImage"), { xPercent: 100, x: 0}, {xPercent: 0})
+	  // ...and the image the opposite way (at the same time)
+	  .fromTo(section.querySelector(".afterImage img"), {xPercent: -100, x: 0}, {xPercent: 0}, 0);
 });
 
 </script>
