@@ -40,6 +40,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+.comparisonSection {
+  position: relative;
+  padding-bottom: 56.25%; /* to maintain aspect ratio (responsive!) */
+}
 .comparisonImage {
   width: 100%;
   height: 100%;
@@ -58,12 +62,6 @@ img {
   height: 100%;
   position: absolute;
   top: 0;
-}
-.panel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 90vh;
 }
 </style>
 <body>
@@ -85,11 +83,11 @@ img {
 </p>
 <br>
 
-<section class="panel rutt">
+<section class="comparisonSection">
   <a href="Ruttungsboje.html"><h1>Ruttungsboje</h1></a>
     <!--<img src="Ruttungsboje_1.png" alt="Ruttungsboje">-->
   <div class="comparisonImage beforeImage">
-    <img src="Ruttungsboje_1.png" alt="Closed">
+    <img src="Ruttungsboje_2.png" alt="Closed">
   </div>
     </div>
   <div class="comparisonImage afterImage">
