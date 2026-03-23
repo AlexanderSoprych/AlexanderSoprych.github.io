@@ -126,16 +126,14 @@ gsap.utils.toArray(".comparisonSection").forEach(section => {
 	let tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: section,
-				start: "center center",
-        // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
-				 
+				start: () => panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", // if it's shorter than the viewport, we prefer to pin it at the top
+				end: () => "+=" + section.offsetWidth,
 				scrub: true,
 				pin: true,
-        anticipatePin: 1
+        		anticipatePin: 1
 			},
 			defaults: {ease: "none"}
 		});
-	// animate the container one way...
 	tl.fromTo(section.querySelector(".afterImage"), { xPercent: 100, x: 0}, {xPercent: 0})
 	  .fromTo(section.querySelector(".afterImage img"), {xPercent: -100, x: 0}, {xPercent: 0}, 0);
 });
