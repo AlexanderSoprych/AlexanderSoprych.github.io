@@ -63,7 +63,7 @@ body {margin:0;}
 </div>
 
 <div class="header" id="signatureMenu">
-  <a href="index.html"><h2>Alexander Soprych</a></h2>
+  <a href="index.html" style="color:black"><h2><span id="signature">Alexander Soprych</span></h2></a>
 </div>
   
 <p>
@@ -119,6 +119,8 @@ gsap.utils.toArray(".comparisonSection").forEach(section => {
 				trigger: section,
 				start: "center center",
 				end: () => "+=" + section.offsetWidth,
+				onEnter: document.getElementById("signature").style.color = 'white';,
+      			onLeave: document.getElementById("signature").style.color = 'black';,
 				scrub: true,
 				pin: true,
         		anticipatePin: 1
