@@ -119,13 +119,13 @@ gsap.utils.toArray(".comparisonSection").forEach(section => {
 				trigger: section,
 				start: "center center",
 				end: () => "+=" + section.offsetWidth,
-				onEnter: document.getElementById("signature").style.color = 'white';,
-      			onLeave: document.getElementById("signature").style.color = 'black';,
 				scrub: true,
 				pin: true,
         		anticipatePin: 1
 			},
 			defaults: {ease: "none"}
+			onEnter: document.getElementById("signature").style.color = 'white';,
+      		onLeave: document.getElementById("signature").style.color = 'black';,
 		});
 	tl.fromTo(section.querySelector(".afterImage"), { xPercent: 100, x: 0}, {xPercent: 0})
 	  .fromTo(section.querySelector(".afterImage img"), {xPercent: -100, x: 0}, {xPercent: 0}, 0);
