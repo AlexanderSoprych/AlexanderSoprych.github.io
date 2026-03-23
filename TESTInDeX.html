@@ -126,7 +126,7 @@ gsap.utils.toArray(".comparisonSection").forEach(section => {
 	let tl = gsap.timeline({
 			scrollTrigger: {
 				trigger: section,
-				start: () => panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", // if it's shorter than the viewport, we prefer to pin it at the top
+				start: "center center",
 				end: () => "+=" + section.offsetWidth,
 				scrub: true,
 				pin: true,
