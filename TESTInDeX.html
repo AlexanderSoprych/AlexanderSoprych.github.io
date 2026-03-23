@@ -76,7 +76,6 @@ body {margin:0;}
 
 <section class="comparisonSection">
   <a href="Ruttungsboje.html"><h1>Ruttungsboje</h1></a>
-    <!--<img src="Ruttungsboje_1.png" alt="Ruttungsboje">-->
   <div class="comparisonImage beforeImage">
     <img src="Ruttungsboje_2.png" alt="Closed">
   </div>
@@ -85,12 +84,13 @@ body {margin:0;}
     <img src="Ruttungsboje_1.png" alt="Open">
   </div>
 </section>
-
 <section class="comparisonSection">
   <a href="Królik_Main.html"><h1>Królik Apollo</h1></a>
-    <!--<img src="Królik_Apollo_Front_Dark.png" alt="Królik Apollo">-->
-  <div class="comparisonImage beforeImage">
-    <img src="Królik_Apollo_Front_Dark.png" alt="Dark">
+	<div class="comparisonImage beforeImage">
+    <picture>
+	<source media="max-width: 420px)"srcset="Królik_Apollo_Top.png">
+	<img src="Królik_Apollo_Front_Dark.png" alt="Dark">
+	</picture>
   </div>
     </div>
   <div class="comparisonImage afterImage">
@@ -109,7 +109,6 @@ body {margin:0;}
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
 
 <script>
