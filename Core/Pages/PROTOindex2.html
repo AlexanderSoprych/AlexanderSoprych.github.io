@@ -7,7 +7,7 @@
 </head>
 <style>
 section {
-  position: relative;
+  position: sticky;
   height: auto;
   width: 100%;
   display: flex;
@@ -20,19 +20,30 @@ section {
   top: 2.5%;
   margin-left: 20px;
   font-family: monaco, Consolas, "Lucida Console", monospace;
-  font-size: 20px;
+  font-size: 1vw;
   z-index: 1;
 }
-a{text-decoration: none; color: ghostwhite;}
+.header span.textWhite {
+  position: absolute;
+  left: 0;
+}
+.textBlack {
+  color: black;
+}
+.textWhite {
+  color: ghostwhite;
+  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)
+}
+a {text-decoration: none;}
 h1 {
   position: absolute;
   top: 50%;
   text-align: center;
   font-family: monaco, Consolas, "Lucida Console", monospace;
-  font-size: 40px;
   color: white;
   width: 100%;
   left: 0;
+  font-size: 2vw;
   z-index: 1;
 }
 img {max-width: 100%; height: auto;}
@@ -48,7 +59,10 @@ body {margin: 0; padding: 0;}
 <!-- Sticky Header w/Navigation Menu //-->
 
 <div class="header" id="signatureMenu">
-  <a href="../Pages/OLD/index.html"><h2>Alexander Soprych</h2></a>
+  <h2>
+    <a href="../Pages/OLD/index.html"><span class="textBlack">Alexander Soprych</a></span>
+    <a href="../Pages/OLD/index.html"><span class="textWhite">Alexander Soprych</a></span>
+  </h2>
 </div>
   
 <p>
@@ -57,13 +71,12 @@ body {margin: 0; padding: 0;}
   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </p>
-<br>
 
 <!-- Main Image Showcase //-->
 
 <section class="panel videoTEST">
   <a href="../Pages/OLD/Ruttungsboje.html"><h1>Video Test</h1></a>
-<video width="100%" height="auto" muted autoplay loop>
+<video id = "Królik_Video" width="100%" height="auto" muted autoplay loop>
   <source src="../Media/Videos/Królik_Portfolio_Web_Short.mp4" type="video/mp4">
 </video>
 </section>
@@ -146,5 +159,59 @@ ScrollTrigger.create
     duration: 2.5
   }
 });
+</script>
+
+<script>
+var hh = document.querySelector(".header").offsetHeight;
+
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".header",
+    start: "top top",
+    invalidateOnRefresh: true,
+    pin: false,
+    pinSpacing: false
+  }
+});
+
+gsap.fromTo(
+  ".textWhite",
+  {
+    clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)"
+  },
+  {
+    scrollTrigger: {
+      trigger: ".videoTEST",
+      scrub: true,
+
+      start: () => "top top+=" + document.querySelector(".header").offsetTop,
+      end: () => '+=' + document.querySelector(".header").offsetHeight,
+      
+      id: "text-white",
+      markers: false,
+      invalidateOnRefresh: true
+    },
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    ease: 'none'
+  }
+);
+
+</script>
+
+<!-- Video Changing Script //-->
+
+<script>
+window.onload = (event) => {videoChange()};
+
+function videoChange()
+{
+ let adaptivevideo = document.getElementById("Królik_Video");
+
+ if (screen.width > 720) {adaptivevideo.src = "../Media/Videos/Królik_Portfolio_Web_Short.mp4";}
+ 
+ if (screen.width <= 720) {adaptivevideo.src = "../Media/Videos/Królik_Commercial_Final_Version_1.mp4";}
+
+ adaptivevideo.load();
+}
 
 </script>
