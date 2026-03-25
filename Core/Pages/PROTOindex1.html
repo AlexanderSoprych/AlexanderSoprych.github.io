@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <title>Alexander Soprych | Portfolio</title>
-  <link rel="icon" href="new_alpha_icon.png">
+  <link rel="icon" href="../Media\Icons\new_alpha_icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <style>
@@ -56,6 +56,7 @@ img {max-width: 100%; height: auto;}
   top: 0;
 }
 body {margin: 0; padding: 0;}
+
 @media screen and (max-width : 720px) {
   h1 {font-size: 5px;}
   h2 {font-size: 2.5px;}
@@ -67,10 +68,14 @@ body {margin: 0; padding: 0;}
   <p>Scroll down to see the sticky effect.</p>
 </div>
 
+<!-- Sticky Header w/Navigation Menu //-->
+
+<br>
 <div class="header" id="signatureMenu">
-  <h2><a href="index.html">Alexander Soprych</a></h2>
+  <h2><a href="../Pages/OLD/index.html">Alexander Soprych</a></h2>
 </div>
-  
+<br>
+
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -79,59 +84,65 @@ body {margin: 0; padding: 0;}
 </p>
 <br>
 
+<!-- Main Image Showcase //-->
+
 <section class="comparisonSection">
-  <a href="Ruttungsboje.html"><h1>Ruttungsboje</h1></a>
+  <a href="../Pages/OLD/Ruttungsboje.html"><h1>Ruttungsboje</h1></a>
   <div class="comparisonImage beforeImage">
     <picture>
 	<source media="(max-width: 720px)"srcset="Królik_Apollo_Top_Dark.png">
-	<img src="Ruttungsboje_2.png" alt="Closed">
+	<img src="../Media/Renders/Ruttungsboje/Ruttungsboje_2.png" alt="Closed">
 	</picture>
   </div>
     </div>
   <div class="comparisonImage afterImage">
 	<picture>
 	<source media="(max-width: 720px)"srcset="Królik_Apollo_Top.png">
-    <img src="Ruttungsboje_1.png" alt="Open">
+    <img src="../Media\Renders\Ruttungsboje\Ruttungsboje_1.png" alt="Open">
 	</picture>
   </div>
 </section>
 
 <section class="comparisonSection">
-  <a href="Królik_Main.html"><h1>Królik Apollo</h1></a>
+  <a href="../Pages/OLD/Królik_Main.html"><h1>Królik Apollo</h1></a>
 	<div class="comparisonImage beforeImage">
     <picture>
 	<source media="(max-width: 720px)"srcset="Królik_Apollo_Top_Dark.png">
-	<img src="Królik_Apollo_Front_Dark.png" alt="Dark">
+	<img src="../Media\Renders\Królik Apollo\Królik_Apollo_Front_Dark.png" alt="Dark">
 	</picture>
   </div>
     </div>
   <div class="comparisonImage afterImage">
 	<picture>
 	<source media="(max-width: 720px)"srcset="Królik_Apollo_Top.png">
-    <img src="Królik_Apollo_Front_Light.png" alt="Lit">
+    <img src="../Media\Renders\Królik Apollo\Królik_Apollo_Front_Light.png" alt="Lit">
 	</picture>
   </div>
 </section>
 	
 <section class="panel">
-  <a href="Królik_Main.html"><h1>Desert Tigers</h1></a>
+  <a href="../Pages/OLD/Królik_Main.html"><h1>Desert Tigers</h1></a>
 	<picture>
 	<source media="(max-width: 720px)"srcset="Królik_Apollo_Top_Dark.png">
-    <img src="Studio_2_Project_4_Final_1.png" alt="Desert Tigers">
+    <img src="../Media\Renders\Desert_Tigers_01.png" alt="Desert Tigers">
 	</picture>
 </section>
 
 <section class="panel tigers">
-  <a href="Królik_Main.html"><h1>Desert Tigers</h1></a>
+  <a href="../Pages/OLD/Królik_Main.html"><h1>Desert Tigers</h1></a>
     <picture>
 	<source media="(max-width: 720px)"srcset="Królik_Apollo_Top_Dark.png">
-    <img src="Studio_2_Project_4_Final_1.png" alt="Desert Tigers">
+    <img src="../Media\Renders\Desert_Tigers_01.png" alt="Desert Tigers">
 	</picture>
 </section>
 </body>
 
+<!-- GSAP Libraries //-->
+
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+
+<!-- GSAP Scripts //-->
 
 <script>
 gsap.utils.toArray(".comparisonSection").forEach(section => {
