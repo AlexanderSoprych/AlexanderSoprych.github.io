@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <title>Alexander Soprych | Portfolio</title>
-  <link rel="icon" href="../Media\Icons/new_alpha_icon.png">
+  <link rel="icon" href="../Media/Icons/new_alpha_icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <style>
@@ -30,10 +30,10 @@ h1 {
   top: 50%;
   text-align: center;
   font-family: monaco, Consolas, "Lucida Console", monospace;
+  font-size: 40px;
   color: white;
   width: 100%;
   left: 0;
-  font-size: 40px;
   z-index: 1;
 }
 img {max-width: 100%; height: auto;}
@@ -49,7 +49,7 @@ body {margin: 0; padding: 0;}
 <!-- Sticky Header w/Navigation Menu //-->
 
 <div class="header" id="signatureMenu">
-  <h2><a href="../Pages/OLD/index.html">Alexander Soprych</a></h2>
+  <a href="../Pages/OLD/index.html"><h2>Alexander Soprych</h2></a>
 </div>
   
 <p>
@@ -65,14 +65,14 @@ body {margin: 0; padding: 0;}
 <section class="panel videoTEST">
   <a href="../Pages/OLD/Ruttungsboje.html"><h1>Video Test</h1></a>
 <video width="100%" height="auto" muted autoplay loop>
-  <source src="..\Media\Videos\Królik_Portfolio_Web_Short.mp4" type="video/mp4">
+  <source src="../Media/Videos/Królik_Portfolio_Web_Short.mp4" type="video/mp4">
 </video>
 </section>
 
 <section class="panel rutt">
   <a href="../Pages/OLD/Ruttungsboje.html"><h1>Ruttungsboje</h1></a>
   <picture>
-	  <source media="(max-width: 720px)"srcset="Królik_Apollo_Top_Dark.png">
+	  <source media="(max-width: 720px)"srcset="../Media/Renders/Królik Apollo/Królik_Apollo_Top_Dark.png">
 	    <img src="../Media/Renders/Ruttungsboje/Ruttungsboje_1.png" alt="Ruttungsboje">
 	</picture>
 </section>
@@ -80,26 +80,32 @@ body {margin: 0; padding: 0;}
 <section class="panel królik">
   <a href="../Pages/OLD/Królik_Main.html"><h1>Królik Apollo</h1></a>
   <picture>
-	  <source media="(max-width: 720px)"srcset="Królik_Apollo_Top_Dark.png">
-	    <img src="../Media\Renders\Królik Apollo\Królik_Apollo_Front_Dark.png" alt="Królik Apollo">
+	  <source media="(max-width: 720px)"srcset="../Media/Renders/Królik Apollo/Królik_Apollo_Top_Dark.png">
+	    <img src="../Media/Renders/Królik Apollo/Królik_Apollo_Front_Dark.png" alt="Królik Apollo">
 	</picture>
 </section>
 
 <section class="panel">
   <a href="../Pages/OLD/Królik_Main.html"><h1>Desert Tigers</h1></a>
   <picture>
-	  <source media="(max-width: 720px)"srcset="Królik_Apollo_Top_Dark.png">
-      <img src="../Media\Renders\Desert_Tigers_01.png" alt="Desert Tigers">
+	  <source media="(max-width: 720px)"srcset="../Media/Renders/Królik Apollo/Królik_Apollo_Top_Dark.png">
+      <img src="../Media/Renders/Desert_Tigers_01.png" alt="Desert Tigers">
 	</picture>
 </section>
 
 <section class="panel tigers">
   <a href="../Pages/OLD/Królik_Main.html"><h1>Desert Tigers</h1></a>
   <picture>
-	  <source media="(max-width: 720px)"srcset="Królik_Apollo_Top_Dark.png">
-      <img src="../Media\Renders\Desert_Tigers_01.png" alt="Desert Tigers">
+	  <source media="(max-width: 720px)"srcset="../Media/Renders/Królik Apollo/Królik_Apollo_Top_Dark.png">
+      <img src="../Media/Renders/Desert_Tigers_01.png" alt="Desert Tigers">
 	</picture>
 </section>
+<br>
+
+<p>
+  This is a portfolio, not a corporate data siphon. NO cookies : )
+</p>
+
 </body>
 
 <!-- GSAP Libraries //-->
@@ -123,7 +129,7 @@ panels.forEach((panel, i) =>
   ({
     trigger: panel,
     start: () => panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", // if it's shorter than the viewport, we prefer to pin it at the top
-    pin: true, 
+    pin: true,
     pinSpacing: false 
   });
 });
@@ -138,7 +144,7 @@ ScrollTrigger.create
           snapScroll = gsap.utils.snap(panelStarts, self.scroll()); // find the closest one
       return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll); // snapping requires a progress value, so convert the scroll position into a normalized progress value between 0 and 1
     },
-    duration: 0.75
+    duration: 2.5
   }
 });
 
