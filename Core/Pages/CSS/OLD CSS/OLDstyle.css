@@ -1,0 +1,106 @@
+body{
+  background-color: linear-gradient(#e8e8e8, #e0e0e0);
+  text-align: center;
+  color: lightorange;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  color: ghostwhite;
+}
+h1{
+  color: ghostwhite;  
+  position: relative; bottom: -10px;
+  text-align: center;
+}
+h2{
+  color: ghostwhite;  
+  position: relative; bottom: -10px;
+  text-decoration: overline;
+  text-decoration-color: lightpink;
+  font-style: oblique;
+  text-align: right;
+  font-size: 25px;
+}
+h3{
+  color: ghostwhite;  
+  position: relative; bottom: -10px;
+  font-style: oblique;
+  text-align: center;
+}
+h6{
+  color: ghostwhite;
+  font-style: oblique;
+  text-align: center;
+}
+p{
+  color: ghostwhite;
+  font-size: 25px;
+  font-style: oblique;
+  text-align: center;
+  text-decoration: inherit;
+  padding: 10px;
+  position: relative; bottom: -25px;
+}
+li{
+  color: ghostwhite;
+  font-size: 30px;
+  font-style: oblique;
+  text-align: left;
+  text-decoration: inherit;
+  list-style-position: inside;
+  color: lightpink;
+}
+img{
+  width: 1080px;
+  max-width: 80%;
+  align-self: center;
+  margin-bottom: -25px;
+  border-radius: 20px;
+  border-bottom: solid;
+}
+@media screen and (max-width : 480px) {
+  img{max-width:90%;}
+}
+.Main_Title{
+  color: ghostwhite;
+  text-align: left;
+  font-size: 40px;
+  text-decoration: overline;
+  text-decoration-color: lightpink;
+}
+.Pink_Border{
+  align-self: center;
+  border-radius: 20px;
+  border-bottom: solid;
+  border-bottom-color: lightpink;
+  border-width: medium;
+}
+.Orange_Border{
+  align-self: center;
+  margin-top: 50px;
+  border-radius: 20px;
+  border-bottom: solid;
+  border-bottom-color: orange;
+  border-width: medium; 
+}
+.Logo{
+  align-self: center;
+  border-bottom: solid;
+  border-bottom-color: orange;
+  border-top: solid;
+  border-top-color: orange;
+  margin-top: 25px;
+}
+.End_List{
+  color: ghostwhite;
+  text-decoration: overline;
+  text-decoration-color: orange;
+  position: relative; bottom: -10px;
+}
+.End_List_2{
+  color: ghostwhite;
+  text-decoration: overline;
+  text-decoration-color: lightpink;
+  position: relative; bottom: -10px;
+}

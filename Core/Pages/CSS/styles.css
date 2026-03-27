@@ -1,0 +1,49 @@
+section {
+  position: sticky;
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.header {
+  position: sticky;
+  top: 2.5%;
+  margin-left: 20px;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+  font-size: 1vw;
+  z-index: 1;
+}
+.header span.textWhite {
+  position: absolute;
+  left: 0;
+}
+.textBlack {
+  color: black;
+}
+.textWhite {
+  color: ghostwhite;
+  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)
+}
+.spacer {
+  background-color: red;
+  width: 100%;
+  height: 20vw;
+}
+a {text-decoration: none;}
+h1 {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+  color: white;
+  width: 100%;
+  left: 0;
+  font-size: 2vw;
+  z-index: 1;
+}
+img {max-width: 100%; height: auto;}
+video {max-width: 100%; height: auto;}
+body {margin: 0; padding: 0;}
+body::-webkit-scrollbar {display: none;}

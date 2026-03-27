@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Desert Tigers | Alexander Soprych</title>
+  <link rel="icon" href="../Media/Icons/new_alpha_icon.png">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+.backgroundTitle{
+color: rgba(196, 142, 48, 0.705);
+font-size: 150px;
+text-align: left;
+left: 2vh;
+top: -10%;
+}
+.hero {
+background-color: #E5AA45FF;
+width: 100%;
+height: 40vw;
+}
+</style>
+<body>
+    <div class="hero">
+        <model-viewer src="../Media/Assets/Desert_Test.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1.25" exposure="1" shadow-softness="1">
+            <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+            </div>
+        </model-viewer>
+        <h1 class="backgroundTitle">
+            Desert Tigers
+        </h1>
+    </div>
+
+<div class="header" id="signatureMenu">
+  <h2>
+    <a href="../Pages/OLD/index.html"><span class="textBlack">Alexander Soprych</a></span>
+    <a href="../Pages/OLD/index.html"><span class="textWhite">Alexander Soprych</a></span>
+  </h2>
+</div>
+</body>
+
+<!-- Model Viewer Script //-->
+
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+
+<!-- GSAP Libraries //-->
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+
+<script>
+var hh = document.querySelector(".header").offsetHeight;
+
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".header",
+    start: "top top",
+    invalidateOnRefresh: true,
+    pin: false,
+    pinSpacing: false
+  }
+});
+
+gsap.fromTo(
+  ".textWhite",
+  {
+    clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)"
+  },
+  {
+    scrollTrigger: {
+      trigger: none,
+      scrub: true,
+
+      start: () => "top top+=" + document.querySelector(".header").offsetHeight,
+      end: () => '+=' + document.querySelector(".header").offsetHeight,
+      
+      id: "text-white",
+      markers: true,
+      invalidateOnRefresh: true
+    },
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    ease: 'none'
+  }
+);
+
+</script>

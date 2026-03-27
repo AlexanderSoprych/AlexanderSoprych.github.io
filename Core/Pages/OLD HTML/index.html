@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Alexander Soprych | Portfolio | Home</title>
+ <link rel="icon" href="new_alpha_icon.png">
+ 
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  background-color: black;
+  text-align: left;
+  color: orange;
+}
+.flex-container {
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.flex-container > div {
+  background-color: #262626;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  flex-basis: auto;
+  height: auto;
+}
+hoverable {
+  position: relative
+}
+img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  border-bottom: solid;
+  border-bottom-color: lightpink;
+  object-fit: cover;
+}
+#imgHoverK {
+  background-size: cover;
+  height: auto;
+  /* max-width: 100%; */
+  border-radius: 10px;
+  border-bottom: solid;
+  border-bottom-color: lightpink;
+  object-fit: cover;
+}
+#imgHoverA {
+  background-size: cover;
+  height: auto;
+  border-radius: 10px;
+  border-bottom: solid;
+  border-bottom-color: red;
+  object-fit: cover;
+}
+#imgHoverA7 {
+  background-size: cover;
+  height: auto;
+  border-radius: 10px;
+  border-bottom: solid;
+  border-bottom-color: grey;
+  object-fit: cover;
+}
+#imgHoverC {
+  background-size: cover;
+  height: auto;
+  border-radius: 10px;
+  border-bottom: solid;
+  border-bottom-color: yellowgreen;
+  object-fit: cover;
+}
+#imgHoverT {
+  background-size: cover;
+  height: auto;
+  border-radius: 10px;
+  border-bottom: solid;
+  border-bottom-color: moccasin;
+  object-fit: cover;
+}
+#imgHoverP {
+  background-size: cover;
+  height: auto;
+  border-radius: 10px;
+  border-bottom: solid;
+  border-bottom-color: grey;
+  object-fit: cover;
+}
+#imgHoverR {
+  background-size: cover;
+  height: auto;
+  border-radius: 10px;
+  border-bottom: solid;
+  border-bottom-color: yellow;
+  object-fit: cover;
+}
+#imgHoverG {
+  background-size: cover;
+  height: auto;
+  border-radius: 10px;
+  border-bottom: solid;
+  border-bottom-color: grey;
+  object-fit: cover;
+}
+#imgHoverW {
+  background-size: cover;
+  height: auto;
+  border-radius: 10px;
+  border-bottom: solid;
+  border-bottom-color: lightblue;
+  object-fit: cover;
+}
+.flex-item {
+  transition: transform 0.5s ease;
+}
+.sidenavtitle {
+  padding: 4px 8px 4px 32px;
+  text-decoration: none;
+  font-size: 30px;
+  color: #F39C12;
+  display: block;
+}
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -250px;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: transform 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+@media screen and (min-width : 720px) {
+.flex-item:hover {transform: scale(1.01);
+}
+.flex-container > div {
+  flex-basis: calc(50% - 30px); 
+  width: calc(50% - 30px); 
+  height: auto;
+ }
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+@media screen and (max-width : 480px) {
+  img {max-width: 100%;}
+  .flex-container {max-width: 100%; justify-content: flex-end;}
+}
+</style>
+</head>
+<body>
+
+<span style = "font-size:30px; cursor:pointer; color: white; " onclick="openMenu()">&#9776; Alexander Soprych</span>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+ <p class = "sidenavtitle"> Digital Works |</p>
+  <a href="Ruttungsboje.html">Ruttungsboje</a>
+  <a href="Królik_Main.html">Królik Apollo</a>
+  <a href="Kowloon_Walled_City_Main.html">Kowloon Walled City</a>
+  <a href="#">Alfa Romeo GTA</a>
+  <a href="#">Alfa Romeo Carabinieri</a>
+  <a href="Glock_17_Main.html">Glock 17</a>
+  <a href="#">Desert Tigers</a>
+  <a href="#">PzKpfw VI Tiger 1</a>
+  <a href="#">PzKpfw V Panther</a>
+ <p class = "sidenavtitle"> Physical Works |</p>
+  <a href="Physical_Media.html">A7V</a>
+</div>
+
+<div class="flex-container">
+   <div class="flex-item">
+     <a href="Królik_Main.html"><picture><source media="(max-width: 720px)"srcset="A7V_3D_Print_on_Bed.jpg"><img src="A7V_3D_Model_01.png" alt="A7V_3D_Print" 
+        id="imgHoverA7" onmouseover="changeImage('A7V_3D_Print_on_Bed.jpg', 'imgHoverA7')" onmouseout="changeImage('A7V_3D_Model_01.png', 'imgHoverA7')"></picture></a>
+  </div>
+   <div class="flex-item">
+     <a href="Ruttungsboje.html"><picture><source media="(max-width: 720px)"srcset="Ruttungsboje_1.png"><img src="Ruttungsboje_2.png" alt="Ruttungsboje" 
+        id="imgHoverR" onmouseover="changeImage('Ruttungsboje_1.png', 'imgHoverR')" onmouseout="changeImage('Ruttungsboje_2.png', 'imgHoverR')"></picture></a>
+  </div>
+  <div class="flex-item">
+     <a href="Królik_Main.html"><picture><source media="(max-width: 720px)"srcset="Królik_Apollo_Front_Light.png"><img src="Królik_Apollo_Front_Dark.png" alt="Królik_Apollo_Front_Dark" 
+        id="imgHoverK" onmouseover="changeImage('Królik_Apollo_Front_Light.png', 'imgHoverK')" onmouseout="changeImage('Królik_Apollo_Front_Dark.png', 'imgHoverK')"></picture></a>
+  </div>
+  <div class="flex-item" >
+    <a href="Kowloon_Walled_City_Main.html"><img src="HighresScreenshot00003.png" alt="Kowloon Walled City Front"
+        id="imgHoverW" onmouseover="changeImage('HighresScreenshot00008 (1).png', 'imgHoverW')" onmouseout="changeImage('HighresScreenshot00003.png', 'imgHoverW')"></a>
+  </div>
+  <div class="flex-item" >
+    <a href="Królik_Main.html"><img src="Alfa_Romeo_Giulia_Sprint_Final_2.1.png" alt="Alfa Romeo Giulia Sprint"
+       id="imgHoverA" onmouseover="changeImage('Alfa_Romeo_Giulia_Sprint_Final_2.3.png', 'imgHoverA')" onmouseout="changeImage('Alfa_Romeo_Giulia_Sprint_Final_2.1.png', 'imgHoverA')"></a>
+  </div>
+  <div class="flex-item" >
+    <a href="Królik_Main.html"><img src="Alfa_Romeo_Carabinieri_Final_2.1.png" alt="Alfa Romeo Carabinieri" 
+       id="imgHoverC" onmouseover="changeImage('Alfa_Romeo_Carabinieri_Final_2.3.png', 'imgHoverC')" onmouseout="changeImage('Alfa_Romeo_Carabinieri_Final_2.1.png', 'imgHoverC')"></a>
+  </div>
+  <div class="flex-item" >
+    <a href="Glock_17_Main.html"><img src="Glock_17_Final_Render_1.png" alt="Glock 17"
+       id="imgHoverG" onmouseover="changeImage('Glock_17_Final_Render_3.png', 'imgHoverG')" onmouseout="changeImage('Glock_17_Final_Render_1.png', 'imgHoverG')"></a>
+  </div>
+  <div class="flex-item" >
+    <a href="Królik_Main.html"><img src="Studio_2_Project_4_Final_1.png" alt="Desert Tigers"></a>
+  </div>
+ 
+  <div class="flex-item" >
+    <a href="Królik_Main.html"><img src="Low_Poly_Tiger_1_Final_2.2.png" alt="Low Poly Tiger 1" 
+       id="imgHoverT" onmouseover="changeImage('Low_Poly_Tiger_1_Final_2.4.png', 'imgHoverT')" onmouseout="changeImage('Low_Poly_Tiger_1_Final_2.2.png', 'imgHoverT')"></a>
+  </div>
+  <div class="flex-item" >
+    <a href="Królik_Main.html"><img src="Low_Poly_Panther_Final_2.2.png" alt="Low Poly Panther"
+       id="imgHoverP" onmouseover="changeImage('Low_Poly_Panther_Final_2.4.png', 'imgHoverP')" onmouseout="changeImage('Low_Poly_Panther_Final_2.2.png', 'imgHoverP')"></a>
+  </div>
+</div>
+
+<script>
+function openMenu() {
+  document.getElementById("mySidenav").style.transform = "translateX(250px)";
+}
+function closeMenu() {
+  document.getElementById("mySidenav").style.transform = "translateX(0)";
+}
+function changeImage(newImagePath, imgID) {
+  document.getElementById(imgID).src = newImagePath;
+}
+</script>
+  
+</body>
+</html>
