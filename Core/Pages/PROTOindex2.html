@@ -3,58 +3,17 @@
 <head>
   <title>Alexander Soprych | Portfolio</title>
   <link rel="icon" href="../Media/Icons/new_alpha_icon.png">
+  <link rel="stylesheet" href="CSS/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<style>
-section {
-  position: sticky;
-  height: auto;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-.header {
-  position: sticky;
-  top: 2.5%;
-  margin-left: 20px;
-  font-family: monaco, Consolas, "Lucida Console", monospace;
-  font-size: 1vw;
-  z-index: 1;
-}
-.header span.textWhite {
-  position: absolute;
-  left: 0;
-}
-.textBlack {
-  color: black;
-}
-.textWhite {
-  color: ghostwhite;
-  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)
-}
-a {text-decoration: none;}
-h1 {
-  position: absolute;
-  top: 50%;
-  text-align: center;
-  font-family: monaco, Consolas, "Lucida Console", monospace;
-  color: white;
-  width: 100%;
-  left: 0;
-  font-size: 2vw;
-  z-index: 1;
-}
-img {max-width: 100%; height: auto;}
-
-body {margin: 0; padding: 0;}
-</style>
 <body>
 
 <div class="welcome-container">
   <p>Scroll down to see the sticky effect.</p>
 </div>
+
+<section class="spacer"></section>
+<section class="spacer"></section>
 
 <!-- Sticky Header w/Navigation Menu //-->
 
@@ -64,19 +23,23 @@ body {margin: 0; padding: 0;}
     <a href="../Pages/OLD/index.html"><span class="textWhite">Alexander Soprych</a></span>
   </h2>
 </div>
-  
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
+
+<section class="panel spacer"></section>
+
+<section style="top: 2.5%; width: 100%; background-color:black;">Test</section>
 
 <!-- Main Image Showcase //-->
 
 <section class="panel videoTEST">
   <a href="../Pages/OLD/Ruttungsboje.html"><h1>Video Test</h1></a>
-<video id = "Królik_Video" width="100%" height="auto" muted autoplay loop>
+<video id = "Królik_Video" muted autoplay loop playsinLine>
+  <source src="../Media/Videos/Królik_Portfolio_Web_Short.mp4" type="video/mp4">
+</video>
+</section>
+
+<section class="panel videoTEST">
+  <a href="../Pages/OLD/Ruttungsboje.html"><h1>Video Test 2</h1></a>
+<video id = "Królik_Video" muted autoplay loop playsinLine>
   <source src="../Media/Videos/Królik_Portfolio_Web_Short.mp4" type="video/mp4">
 </video>
 </section>
@@ -84,7 +47,7 @@ body {margin: 0; padding: 0;}
 <section class="panel rutt">
   <a href="../Pages/OLD/Ruttungsboje.html"><h1>Ruttungsboje</h1></a>
   <picture>
-	  <source media="(max-width: 720px)"srcset="../Media/Renders/Królik Apollo/Królik_Apollo_Top_Dark.png">
+	  <source media="(max-width: 720px)"srcset="../Media/Renders/Ruttungsboje/Ruttungsboje_1_Mobile.png">
 	    <img src="../Media/Renders/Ruttungsboje/Ruttungsboje_1.png" alt="Ruttungsboje">
 	</picture>
 </section>
@@ -112,6 +75,13 @@ body {margin: 0; padding: 0;}
       <img src="../Media/Renders/Desert_Tigers_01.png" alt="Desert Tigers">
 	</picture>
 </section>
+
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
 <br>
 
 <p>
@@ -126,7 +96,7 @@ body {margin: 0; padding: 0;}
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
 
-<!-- GSAP Scripts //-->
+<!-- GSAP Scrolltrigger Scripts //-->
 
 <script>
 gsap.registerPlugin(ScrollTrigger);
@@ -141,7 +111,9 @@ panels.forEach((panel, i) =>
   ({
     trigger: panel,
     start: () => panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", // if it's shorter than the viewport, we prefer to pin it at the top
-    pin: true,
+    markers: true,
+    pin: i === panels.length -1 ? false : true, 
+    end:"bottom 100",
     pinSpacing: false 
   });
 });
@@ -160,6 +132,8 @@ ScrollTrigger.create
   }
 });
 </script>
+
+<!-- Header Color Change Script //-->
 
 <script>
 var hh = document.querySelector(".header").offsetHeight;
@@ -184,11 +158,11 @@ gsap.fromTo(
       trigger: ".videoTEST",
       scrub: true,
 
-      start: () => "top top+=" + document.querySelector(".header").offsetTop,
+      start: () => "top top+=" + document.querySelector(".header").offsetHeight,
       end: () => '+=' + document.querySelector(".header").offsetHeight,
       
       id: "text-white",
-      markers: false,
+      markers: true,
       invalidateOnRefresh: true
     },
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
