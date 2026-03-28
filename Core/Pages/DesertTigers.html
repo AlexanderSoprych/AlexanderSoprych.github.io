@@ -8,37 +8,112 @@
 </head>
 <style>
 .backgroundTitle{
-color: rgba(196, 142, 48, 0.705);
-font-size: 150px;
+color: rgb(145, 100, 60);
+font-size: 7.5vw;
 text-align: left;
 left: 2vh;
 top: -10%;
+z-index: 0;
 }
 .hero {
-background-color: #E5AA45FF;
+background-color: #BF8552FF;
 width: 100%;
 height: 40vw;
+}
+.instructionalText {
+color: seashell;
+font-size: 15px;
+text-align: right;
+padding-right: .5vw;
+font-family: monaco, Consolas, "Lucida Console", monospace;
+transform: translateY(-7.5vw);
+z-index: 100;
+}
+model-viewer {
+  width: 100%;
+  height: 40vw;
+  display: flex;
+  opacity: 0.5;
+  z-index: 1;
+}
+img {max-width: 100%; height: auto;}
+
+@media screen and (max-width : 720px) {
+  .hero{width: auto; height: 100%;}
+  .backgroundTitle{font-size: 50px;}
 }
 </style>
 <body>
     <div class="hero">
-        <model-viewer src="../Media/Assets/Desert_Test.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1.25" exposure="1" shadow-softness="1">
-            <div class="progress-bar hide" slot="progress-bar">
-                <div class="update-bar"></div>
-            </div>
-        </model-viewer>
-        <h1 class="backgroundTitle">
-            Desert Tigers
-        </h1>
+      <model-viewer src="../Media/Assets/Desert_Tigers_Test.glb" camera-controls tone-mapping="neutral" poster="../Media/Renders/Desert_Tigers_Poster.png" shadow-intensity="1.25" exposure="1" shadow-softness="1" camera-orbit="40deg 70deg 22.5m" field-of-view="25deg">
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+      </model-viewer>
+        <h1 class="backgroundTitle">Desert Tigers</h1>
+        <h2 class="informationalText"></h2>
+        <h5 class="instructionalText">Left-click and drag to orbit.<br>Right-click and drag to pan.<br>Scroll up or down to zoom.</h5>
     </div>
 
 <div class="header" id="signatureMenu">
   <h2>
-    <a href="../Pages/OLD/index.html"><span class="textBlack">Alexander Soprych</a></span>
     <a href="../Pages/OLD/index.html"><span class="textWhite">Alexander Soprych</a></span>
+    <a href="../Pages/OLD/index.html"><span class="textBlack">Alexander Soprych</a></span>
   </h2>
 </div>
+
+<section class="spacer"></section>
+
+  <picture>
+	  <source media="(max-width: 720px)"srcset="../Media/Renders/Desert_Tigers_01.png">
+      <img src="../Media/Renders/Desert_Tigers_01.png" alt="Desert Tigers">
+	</picture>
+
+<section class="spacer"></section>
+
+<section class="comparisonSection">
+  <div class="comparisonImage beforeImage">
+    <picture>
+	<source media="(max-width: 720px)"srcset="../Media/Renders/Desert_Tigers_01.png">
+	<img src="../Media/Renders/Desert_Tigers_01.png" alt="Normal">
+	</picture>
+  </div>
+    </div>
+  <div class="comparisonImage afterImage">
+	<picture>
+	<source media="(max-width: 720px)"srcset="../Media/Renders/Desert_Tigers_Wireframe.png">
+    <img src="../Media/Renders/Desert_Tigers_Wireframe.png" alt="Wireframe">
+	</picture>
+  </div>
+</section>
+
 </body>
+
+<!-- GSAP Libraries //-->
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+
+<!-- GSAP Scripts //-->
+
+<script>
+gsap.utils.toArray(".comparisonSection").forEach(section => {
+	let tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: section,
+				start: "center center",
+				end: () => "+=" + section.offsetWidth,
+				scrub: true,
+				pin: true,
+        		anticipatePin: 1
+			},
+			defaults: {ease: "none"}
+		});
+	tl.fromTo(section.querySelector(".afterImage"), { xPercent: 100, x: 0}, {xPercent: 0})
+	  .fromTo(section.querySelector(".afterImage img"), {xPercent: -100, x: 0}, {xPercent: 0}, 0);
+});
+
+</script>
 
 <!-- Model Viewer Script //-->
 
