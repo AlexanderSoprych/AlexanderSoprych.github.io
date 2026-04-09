@@ -7,15 +7,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <style>
+.personalTitle {
+color: black;
+font-size: 10vw;
+text-align: left;
+position: relative;
+font-family: monaco, Consolas, "Lucida Console", monospace;;
+margin: 0;
+left: 2vh;
+top: 10px;
+z-index: 1;
+}
+.personalTitleLower {
+color: black;
+font-size: 5vw;
+text-align: left;
+position: relative;
+font-family: monaco, Consolas, "Lucida Console", monospace;;
+margin: 0;
+left: 2vh;
+top: 15px;
+z-index: 1;
+}
 @media screen and (max-width : 720px) {
  img{max-height: 100%; width: auto;}
 }
 </style>
 <body>
-
-<div class="welcome-container">
-  <p>Scroll down to see the sticky effect.</p>
-</div>
 
 <section class="spacer"></section>
 <section class="spacer"></section>
@@ -29,9 +47,22 @@
   </h2>
 </div>
 
-<section class="panel spacer"></section>
+<section class="spacer"></section>
 
-<section style="top: 2.5%; width: 100%; background-color:black;">Test</section>
+<div class="welcome-container">
+  <h1 class="personalTitle">3D Designer</h1>
+  <h3 class="personalTitleLower">
+    Modeling<br>
+    Texturing<br>
+    Animation<br>
+  </h3>
+  <p>Scroll down to see the sticky effect.</p>
+</div>
+
+<section class="spacer"></section>
+<section class="spacer"></section>
+
+<section class="panel spacer"></section>
 
 <!-- Main Image Showcase //-->
 
@@ -89,9 +120,11 @@
 </p>
 <br>
 
-<p>
-  This is a portfolio, not a corporate data siphon. NO cookies : )
-</p>
+<footer>
+  <p class="footerText">Alexander Soprych © 2020</p>
+  <p class="footerText">No AI</p>
+  <p class="footerText">This is a portfolio, not an advertiser's data siphon. NO cookies!</p>
+</footer>
 
 </body>
 
