@@ -100,6 +100,12 @@ p {
   font-size: 2vw;
   z-index: 1;
 }
+.centered_p {
+  margin-top: 0;
+  margin-left: 20vw; 
+  margin-right: 20vw;
+  margin-bottom: 0;
+}
 footer {
   display: flex;
   justify-content: center;
@@ -138,6 +144,16 @@ footer {
   top: 0;
 }
 img {max-width: 100%; height: auto;}
+.centered_img {
+  width: 60%; 
+  display: block; 
+  margin: auto;
+}
 video {max-width: 100%; height: auto;}
 body {margin: 0; padding: 0; max-width: 100%;}
 body::-webkit-scrollbar {display: none;}
+@media screen and (max-width : 720px) {
+  .backgroundTitle{font-size: 50px;}
+  .informationalText {font-size: 2vh; margin-left: 25vw; left: 1vw; top: 7.5%;}
+  .instructionalText {font-size: 1vh; left: 60vw; right: 10px;}
+}

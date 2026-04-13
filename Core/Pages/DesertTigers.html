@@ -19,17 +19,13 @@ color: rgb(85, 62, 35);
 .instructionalText {
 color: seashell;
 }
-img {max-width: 100%; height: auto;}
-
-@media screen and (max-width : 720px) {
-  .backgroundTitle{font-size: 50px;}
-  .informationalText {font-size: 2vh; margin-left: 25vw; left: 1vw; top: 7.5%;}
-  .instructionalText {font-size: 1vh; left: 60vw; right: 10px;}
-}
 </style>
 <body>
+
+<!-- 3D Hero //-->
+
 <div class="hero">
-  <model-viewer src="../Media/Assets/Desert_Tigers_Test.glb" camera-controls tone-mapping="neutral" poster="../Media/Renders/Desert_Tigers/Desert_Tigers_Poster.png" shadow-intensity="1.25" exposure="1" shadow-softness="1" camera-orbit="40deg 70deg 22.5m" field-of-view="25deg">
+  <model-viewer src="../Media/Assets/Desert_Tigers_Pre_Bake.glb" camera-controls tone-mapping="neutral" poster="../Media/Renders/Desert_Tigers/Desert_Tigers_Poster.png" shadow-intensity="1.25" exposure="1" shadow-softness="1" camera-orbit="40deg 70deg 22.5m" field-of-view="25deg">
     <div class="progress-bar hide" slot="progress-bar">
       <div class="update-bar"></div>
     </div>
@@ -38,6 +34,8 @@ img {max-width: 100%; height: auto;}
     <h2 class="informationalText">A stylized isometric motif depicting DAK Tiger 1's roaming the dunes of Tunisia.</h2>
     <h5 class="instructionalText">Left-click and drag to orbit.<br>Right-click and drag to pan.<br>Scroll up or down to zoom.</h5>
 </div>
+
+<!-- Header //-->
 
 <div class="header" id="signatureMenu">
   <h2>
@@ -54,21 +52,28 @@ img {max-width: 100%; height: auto;}
   </h2>
 </div>
 
-<p>
-  This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
-  A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
-</p>
+<br>
 
 <div>
-  <img style="width: 50%; float: left; position: relative;" src="../Media/Renders/Desert_Tigers/Low_Poly_Tiger_1_Final_2.2.png" alt="Tiger 1">
-    <p style="float: right; margin-left: 10px;">
-      This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
-      A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
-    </p>
-</div>
-
-<div>
-  <img style="width: 50%; float: right; position: relative;" src="../Media/Renders/Desert_Tigers/Low_Poly_Tiger_1_Final_3.png" alt="Tiger 1">
+  <p class="centered_p">
+    This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
+    A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
+  </p>
+<img class="centered_img" src="../Media/Renders/Desert_Tigers/Low_Poly_Tiger_1_Transparent_01.png" alt="Tiger 1 Front"> 
+  <p class="centered_p">
+    This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
+    A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
+  </p>
+<img class="centered_img" src="../Media/Renders/Desert_Tigers/Low_Poly_Tiger_1_Transparent_02.png" alt="Tiger 1 Rear">
+  <p class="centered_p">
+    This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
+    A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
+  </p>
+<model-viewer style="width: 60%; position: relative; margin-left: 20%" src="../Media/Assets/Low_Poly_Tiger_1.glb" camera-controls tone-mapping="neutral" poster="../Media/Renders/Desert_Tigers/Low_Poly_Tiger_1_Transparent_01.png" shadow-intensity="1.25" exposure="1" shadow-softness="1" camera-orbit="40deg 70deg 15m" field-of-view="25deg">
+  <div class="progress-bar hide" slot="progress-bar">
+    <div class="update-bar"></div>
+  </div>
+</model-viewer>
 </div>
 
 <section class="comparisonSection">
