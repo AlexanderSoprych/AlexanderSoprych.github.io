@@ -11,10 +11,10 @@
 background-color: rgb(190, 135, 82);
 }
 .backgroundTitle{
-color: rgb(145, 100, 60);
+color: rgb(85, 62, 35);
 }
 .informationalText {
-color: rgb(85, 62, 35);
+color: rgb(145, 100, 60);
 }
 .instructionalText {
 color: seashell;
@@ -39,17 +39,19 @@ color: seashell;
 
 <div class="header" id="signatureMenu">
   <h2>
-    <a href="../Pages/OLD/index.html"><span class="textWhite">Alexander Soprych</a></span> 
-    <a href="../Pages/OLD/index.html"><span class="textBlack">Alexander Soprych</a></span>
+    <a href="../Pages/OLD/index.html"><span class="textWhite">Alexander Soprych</span></a> 
+    <a href="../Pages/OLD/index.html"><span class="textBlack">Alexander Soprych</span></a>
   </h2>
-  <h2 class="navMenu">
-    <a href="../Pages/OLD/index.html"><span class="textWhite">Contact</a></span>
-    <a href="../Pages/OLD/index.html"><span class="textBlack">Contact</a></span>
-  </h2>
-  <h2 class="navMenu">
-    <a href="../Pages/OLD/index.html"><span class="textWhite">Projects</a></span>
-    <a href="../Pages/OLD/index.html"><span class="textBlack">Projects</a></span>
-  </h2>
+  <div>
+    <h2 class="navMenu">
+      <a href="../Pages/OLD/index.html"><span class="textWhite">Projects</span></a>
+      <a href="../Pages/OLD/index.html"><span class="textBlack">Projects</span></a>
+    </h2>
+    <h2 class="navMenu">
+      <a href="../Pages/OLD/index.html"><span class="textWhite">Contact</span></a>
+      <a href="../Pages/OLD/index.html"><span class="textBlack">Contact</span></a>
+    </h2>
+  </div>
 </div>
 
 <br>
@@ -69,7 +71,7 @@ color: seashell;
     This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
     A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
   </p>
-<model-viewer style="width: 60%; position: relative; margin-left: 20%" src="../Media/Assets/Low_Poly_Tiger_1.glb" camera-controls tone-mapping="neutral" poster="../Media/Renders/Desert_Tigers/Low_Poly_Tiger_1_Transparent_01.png" shadow-intensity="1.25" exposure="1" shadow-softness="1" camera-orbit="40deg 70deg 15m" field-of-view="25deg">
+<model-viewer style="width: 60%; position: relative; margin-left: 20%" src="../Media/Assets/Low_Poly_Tiger_1.glb" camera-controls tone-mapping="neutral" poster="../Media/Renders/Desert_Tigers/Low_Poly_Tiger_1_Transparent_01.png" shadow-intensity="1.25" exposure="1" shadow-softness="1" camera-orbit="40deg 70deg 10m" field-of-view="35deg">
   <div class="progress-bar hide" slot="progress-bar">
     <div class="update-bar"></div>
   </div>
@@ -92,8 +94,7 @@ color: seashell;
 </section>
 
 <footer>
-  <p class="footerText">Alexander Soprych © 2020</p>
-  <p class="footerText">No AI</p>
+  <p class="footerText">Alexander Soprych © 2026</p>
   <p class="footerText">This is a portfolio, not an advertiser's data siphon. NO cookies!</p>
 </footer>
 
@@ -162,7 +163,7 @@ gsap.fromTo(
       end: () => '+=' + document.querySelector(".header").offsetHeight,
       
       id: "text-white",
-      markers: true,
+      markers: false,
       invalidateOnRefresh: true
     },
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",

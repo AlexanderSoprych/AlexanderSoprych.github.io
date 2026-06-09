@@ -9,11 +9,13 @@ section {
 }
 .header {
   position: sticky;
-  top: 2.5%;
+  top: 0;
+  align-items: center;
   margin-left: 20px;
   font-family: monaco, Consolas, "Lucida Console", monospace;
   font-size: 1vw;
   z-index: 1;
+  display: flex;
   justify-content: space-between;
 }
 .header span.textWhite {
@@ -25,7 +27,10 @@ section {
 }
 .textWhite {
   color: ghostwhite;
-  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)
+  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+.textBaseWhite {
+  color: ghostwhite;
 }
 .spacer {
   background-color: white;
@@ -97,7 +102,7 @@ p {
   text-align: left;
   margin-left: 2%;
   font-family: monaco, Consolas, "Lucida Console", monospace;
-  font-size: 2vw;
+  font-size: 1.75vw;
   z-index: 1;
 }
 .centered_p {
@@ -118,13 +123,15 @@ footer {
   color: white;
   margin: 50px;
   display: flex;
+  justify-content: space-between;
 }
 .navMenu {
   margin: 0;
-  margin-right: 50px;
+  margin-right: 20px;
   position: relative;
-  float: right;
+  display: inline-block;
 }
+
 .comparisonSection {position: relative; padding-bottom: 56.25%;}
 
 .comparisonImage {width: 100%; height: 100%;}
@@ -150,7 +157,7 @@ img {max-width: 100%; height: auto;}
   margin: auto;
 }
 video {max-width: 100%; height: auto;}
-body {margin: 0; padding: 0; max-width: 100%;}
+body {margin: 0; padding: 0; max-width: 100%; overflow-x: hidden;}
 body::-webkit-scrollbar {display: none;}
 @media screen and (max-width : 720px) {
   .backgroundTitle{font-size: 50px;}

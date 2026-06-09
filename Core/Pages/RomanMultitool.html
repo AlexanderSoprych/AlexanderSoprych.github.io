@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Ruttungsboje | Alexander Soprych</title>
+  <title>Roman Multitool | Alexander Soprych</title>
   <link rel="icon" href="../Media/Icons/new_alpha_icon.png">
   <link rel="stylesheet" href="CSS/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <style>
 .hero {
-background-color: rgb(205, 200, 100);
+background-color: rgb(90, 115, 85);
 }
 .backgroundTitle{
-color: rgb(160, 70, 45);
+color: rgb(50, 65, 50);
 }
 .informationalText {
-color: rgb(128, 124, 62);
+color: rgb(69, 84, 62);
 }
 .instructionalText {
-color: rgb(26, 26, 26);
+color: rgb(212, 212, 212);
 }
 img {max-width: 100%; height: auto;}
 </style>
@@ -26,13 +26,13 @@ img {max-width: 100%; height: auto;}
 <!-- 3D Hero //-->
 
 <div class="hero">
-  <model-viewer src="../Media/Assets/Desert_Tigers_Test.glb" camera-controls tone-mapping="neutral" poster="../Media/Renders/Rettungsboje/Rettungsboje_1_Poster.png" shadow-intensity="1.25" exposure="1" shadow-softness="1" camera-orbit="40deg 70deg 22.5m" field-of-view="25deg">
+  <model-viewer src="../Media/Assets/Desert_Tigers_Test.glb" camera-controls tone-mapping="neutral" poster="../Media/Renders/Roman_Multitool/RM_Poster.png" shadow-intensity="1.25" exposure="1" shadow-softness="1" camera-orbit="40deg 70deg 22.5m" field-of-view="25deg">
     <div class="progress-bar hide" slot="progress-bar">
       <div class="update-bar"></div>
     </div>
   </model-viewer>
-    <h1 class="backgroundTitle">Rettungsboje</h1>
-    <h2 class="informationalText">A hyper-realistic rendering of a Luftwaffe Channel rescue buoy</h2>
+    <h1 class="backgroundTitle">Roman Multitool</h1>
+    <h2 class="informationalText">A digital facsimilie of a surviving classical era curiosity</h2>
     <h5 class="instructionalText">Left-click and drag to orbit.<br>Right-click and drag to pan.<br>Scroll up or down to zoom.</h5>
 </div>
 
@@ -62,12 +62,12 @@ img {max-width: 100%; height: auto;}
     This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
     A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
   </p>
-<img class="centered_img" src="../Media/Renders/Rettungsboje/Rettungsboje_11.png" alt="Rettungsboje Interior">
+<img class="centered_img" src="../Media/Renders/Roman_Multitool/RM_02.png" alt="Rettungsboje Interior">
   <p class="centered_p">
     This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
     A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
   </p>
-<img class="centered_img" src="../Media/Renders/Rettungsboje/Rettungsboje_10.png" alt="Rettungsboje Interior Roof">
+<img class="centered_img" src="../Media/Renders/Roman_Multitool/RM_03.png" alt="Rettungsboje Interior Roof">
   <p class="centered_p">
     This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
     A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
@@ -80,13 +80,13 @@ img {max-width: 100%; height: auto;}
   <div class="comparisonImage beforeImage">
     <picture>
 	    <source media="(max-width: 720px)" srcset="../Media/Renders/Rettungsboje/Rettungsboje_1_Mobile.png">
-	    <img src="../Media/Renders/Rettungsboje/Rettungsboje_1.png" alt="Normal">
+	    <img src="../Media/Renders/Roman_Multitool/RM_01.png" alt="Normal">
 	  </picture>
   </div>
   <div class="comparisonImage afterImage">
 	  <picture>
 	    <source media="(max-width: 720px)" srcset="../Media/Renders/Rettungsboje/Rettungsboje_1_Mobile.png">
-      <img src="../Media/Renders/Rettungsboje/Rettungsboje_Wireframe.png" alt="Wireframe">
+      <img src="../Media/Renders/Roman_Multitool/RM_Wireframe.png" alt="Wireframe">
 	  </picture>
   </div>
 </section>
@@ -161,7 +161,7 @@ gsap.fromTo(
       end: () => '+=' + document.querySelector(".header").offsetHeight,
       
       id: "text-white",
-      markers: false,
+      markers: true,
       invalidateOnRefresh: true
     },
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
