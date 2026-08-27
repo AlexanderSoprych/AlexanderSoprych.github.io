@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <title>Alexander Soprych | Portfolio</title>
-  <link rel="icon" href="../Media/Icons/Personal_Favicon.svg">
-  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="icon" href="Core/Media/Icons/Personal_Favicon.svg">
+  <link rel="stylesheet" href="Core/Pages/CSS/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Footer Font //-->
@@ -83,55 +83,55 @@ z-index: 2;
 
 <!-- Header //-->
 
-<div class="header" id="signatureMenu"></div>
+<div class="headerIndex" id="signatureMenuIndex"></div>
 
 <!-- Main Image Showcase //-->
 
 <!-- Tiger 1 (WIP) //-->
 
 <section class="panel initial">
-  <a href="../Pages/Tiger.html"><h1 class="panelTitle">Pz.Kpfw Tiger 1</h1></a>
+  <a href="Core/Pages/Tiger.html"><h1 class="panelTitle">Pz.Kpfw Tiger 1</h1></a>
   <picture>
-	  <source media="(max-width: 720px)"srcset="../Media/Renders/Roman_Multitool/RM_Mobile.png">
-	    <img src="../Media/Renders/Tiger_1/Tiger_1_Progress_01.png" alt="Tiger 1">
+	  <source media="(max-width: 720px)"srcset="Core/Media/Renders/Roman_Multitool/RM_Mobile.png">
+	    <img src="Core/Media/Renders/Tiger_1/Tiger_1_Progress_01.png" alt="Tiger 1">
 	</picture>
 </section>
 
 <!-- A7V //-->
 
 <section class="panel">
-  <a href="../Pages/A7V.html"><h1 class="panelTitle">Sturmpanzerwagen<br>A7V</h1></a>
+  <a href="Core/Pages/A7V.html"><h1 class="panelTitle">Sturmpanzerwagen<br>A7V</h1></a>
   <picture>
-	  <source media="(max-width: 720px)"srcset="../Media/Renders/Roman_Multitool/RM_Mobile.png">
-	    <img src="../Media/Renders/A7V_Final_Side_Angle.png" alt="A7V">
+	  <source media="(max-width: 720px)"srcset="Core/Media/Renders/Roman_Multitool/RM_Mobile.png">
+	    <img src="Core/Media/Renders/A7V_Final_Side_Angle.png" alt="A7V">
 	</picture>
 </section>
 
 <!-- Roman Multitool //-->
 
 <section class="panel">
-  <a href="../Pages/RomanMultitool.html"><h1 class="panelTitle">Roman Multitool</h1></a>
+  <a href="Core/Pages/RomanMultitool.html"><h1 class="panelTitle">Roman Multitool</h1></a>
   <picture>
-	  <source media="(max-width: 720px)"srcset="../Media/Renders/Roman_Multitool/RM_Mobile.png">
-	    <img src="../Media/Renders/Roman_Multitool/RM_04.png" alt="Roman Multitool">
+	  <source media="(max-width: 720px)"srcset="Core/Media/Renders/Roman_Multitool/RM_Mobile.png">
+	    <img src="Core/Media/Renders/Roman_Multitool/RM_04.png" alt="Roman Multitool">
 	</picture>
 </section>
 
 <!-- Rettungsboje //-->
 
 <section class="panel">
-  <a href="../Pages/Rettungsboje.html"><h1 class="panelTitle">Rettungsboje</h1></a>
+  <a href="Core/Pages/Rettungsboje.html"><h1 class="panelTitle">Rettungsboje</h1></a>
   <video id = "Rettungsboje_Animated_Scene" muted autoplay loop playsinLine>
-    <source src="../Media/Videos/Rettungsboje_Animated.mp4" type="video/mp4">
+    <source src="Core/Media/Videos/Rettungsboje_Animated.mp4" type="video/mp4">
   </video>
 </section>
 
 <!-- Królik Apollo //-->
 
 <section class="panel">
-  <a href="../Pages/Królik_Home.html"><h1 class="panelTitle">Królik Apollo</h1></a>
+  <a href="Core/Pages/Królik_Home.html"><h1 class="panelTitle">Królik Apollo</h1></a>
   <video id = "Królik_Ad_Shortened" muted autoplay loop playsinLine>
-    <source src="../Media/Videos/Królik_Portfolio_Web_Short.mp4" type="video/mp4">
+    <source src="Core/Media/Videos/Królik_Portfolio_Web_Short.mp4" type="video/mp4">
   </video>
 </section>
 
@@ -150,10 +150,10 @@ z-index: 2;
 <!-- Desert Tigers //-->
 
 <section class="panel">
-  <a href="../Pages/DesertTigers.html"><h1 class="panelTitle">Desert Tigers</h1></a>
+  <a href="Core/Pages/DesertTigers.html"><h1 class="panelTitle">Desert Tigers</h1></a>
   <picture>
-	  <source media="(max-width: 720px)"srcset="../Media/Renders/Desert_Tigers/Desert_Tigers_Mobile.png">
-      <img src="../Media/Renders/Desert_Tigers/Desert_Tigers_02.png" alt="Desert Tigers">
+	  <source media="(max-width: 720px)"srcset="Core/Media/Renders/Desert_Tigers/Desert_Tigers_Mobile.png">
+      <img src="Core/Media/Renders/Desert_Tigers/Desert_Tigers_02.png" alt="Desert Tigers">
 	</picture>
 </section>
 
@@ -161,7 +161,7 @@ z-index: 2;
 
 <footer id="footer"></footer>
 
-<script src="../Scripts/repeatingElements.js"></script>
+<script src="Core/Scripts/repeatingElements.js"></script>
 
 </body>
 
@@ -204,11 +204,11 @@ ScrollTrigger.create
 <!-- Header Color Change Script //-->
 
 <script>
-var hh = document.querySelector(".header").offsetHeight;
+var hh = document.querySelector(".headerIndex").offsetHeight;
 
 let tl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".header",
+    trigger: ".headerIndex",
     start: "top top",
     invalidateOnRefresh: true,
     pin: false,
@@ -226,8 +226,8 @@ gsap.fromTo(
       trigger: ".initial",
       scrub: true,
 
-      start: () => "top top+=" + document.querySelector(".header").offsetHeight,
-      end: () => '+=' + document.querySelector(".header").offsetHeight,
+      start: () => "top top+=" + document.querySelector(".headerIndex").offsetHeight,
+      end: () => '+=' + document.querySelector(".headerIndex").offsetHeight,
       
       id: "text-white",
       markers: false,
@@ -249,8 +249,8 @@ function videoChange()
 {
  let adaptivevideo = document.getElementById("Królik_Ad_Shortened");
 
- if (screen.width > 720) {adaptivevideo.src = "../Media/Videos/Królik_Portfolio_Web_Short.mp4";}
- if (screen.width <= 720) {adaptivevideo.src = "../Media/Videos/Królik_Commercial_Final_Version_1.mp4";}
+ if (screen.width > 720) {adaptivevideo.src = "Core/Media/Videos/Królik_Portfolio_Web_Short.mp4";}
+ if (screen.width <= 720) {adaptivevideo.src = "Core/Media/Videos/Królik_Commercial_Final_Version_1.mp4";}
 
  adaptivevideo.load();
 }

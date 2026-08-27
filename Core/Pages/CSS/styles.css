@@ -22,6 +22,21 @@ section {
   position: absolute;
   left: 0;
 }
+.headerIndex {
+  position: sticky;
+  top: 0;
+  align-items: center;
+  margin-left: 20px;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+  font-size: 1vw;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.headerIndex span.textWhite {
+  position: absolute;
+  left: 0;
+}
 .textBlack {
   color: black;
 }
