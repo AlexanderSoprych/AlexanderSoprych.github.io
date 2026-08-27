@@ -2,55 +2,160 @@
 <html lang="en">
 <head>
   <title>Pz.Kpfw Tiger 1 | Alexander Soprych</title>
-  <link rel="icon" href="../Media/Icons/new_alpha_icon.png">
+  <link rel="icon" href="../Media/Icons/Personal_Favicon.svg">
   <link rel="stylesheet" href="CSS/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Footer Font //-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap">
+
+<!-- Model Viewer Script //-->
+
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+
 </head>
+
+<!-- GSAP Libraries //-->
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+
 <style>
-body{
-    background-color: rgb(58, 58, 58)
-}
+  .hero {background-color: rgb(255, 255, 255);}
+  .backgroundTitle {color: rgb(58, 58, 58);}
+  .informationalText {
+    color: rgb(127, 127, 127);
+    margin-left: 70vw;
+  }
+  .instructionalText {color: rgb(0, 0, 0);}
+  body{background-color: rgb(56, 56, 56)}
 </style>
 <body>
 
+<!-- 3D Hero //-->
+
+<div class="hero">
+  <model-viewer src="../Media/Assets/Tiger_1.glb" camera-controls tone-mapping="neutral" poster="../Media/Renders/Tiger_1/Tiger_1_Poster.png" shadow-intensity="1" camera-orbit="45deg 75deg 5m" field-of-view="25deg">
+    <div class="progress-bar" slot="progress-bar">
+      <div class="update-bar"></div>
+    </div>
+  </model-viewer>
+    <h1 class="backgroundTitle">Pz.Kpfw Tiger 1</h1>
+    <h2 class="informationalText">A highly detailed model</h2>
+    <h5 class="instructionalText">Left-click and drag to orbit.<br>Right-click and drag to pan.<br>Scroll up or down to zoom.</h5>
+</div>
+
 <!-- Header //-->
 
-<div class="header" id="signatureMenu">
+<div class="header">
   <h2>
-    <a href="../Pages/OLD/index.html"><span class="textBaseWhite">Alexander Soprych</span></a> 
+    <a href="../Pages/index.html"><span style="color:white;">Alexander Soprych</span></a> 
   </h2>
   <div>
     <h2 class="navMenu">
-      <a href="../Pages/OLD/index.html"><span class="textBaseWhite">Projects</span></a>
+      <a href="../Pages/index.html"><span style="color:white;">Projects</span></a>
     </h2>
     <h2 class="navMenu">
-      <a href="../Pages/OLD/index.html"><span class="textBaseWhite">Contact</span></a>
+      <a href="../Pages/OLD/index.html"><span style="color:white;">Contact</span></a>
     </h2>
   </div>
 </div>
 
 <br>
 
-<img class="centered_img" src="../Media/Renders/Tiger 1/Tiger_1_Progress_01.png" alt="Tiger 1 Front">
-<img class="centered_img" src="../Media/Renders/Tiger 1/Tiger_1_Progress_02.png" alt="Tiger 1 Front">
-
-<br>
-
-<model-viewer style="width: 60%; position: relative; margin-left: 20%" src="../Media/Assets/Tiger_1_Track.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" camera-orbit="763.5deg 52.1deg 0.5848m" field-of-view="30deg">
+<div>
+  <p class="centered_p" style="color:rgb(199, 199, 199)">
+    Though still a work in progress, this high-poly Tiger 1 has nonetheless been realized enough as to fully showcase my modeling ability. 
+    Each section you see has been painstakingly recreated using orthographic diagrams to accurately establish proportions and photographs used for smaller details. 
+  </p>
+<img class="centered_img" src="../Media/Renders/Tiger_1/Tiger_1_Progress_01.png" alt="Tiger 1 Front">
+  <p class="centered_p" style="color:rgb(199, 199, 199)">
+    Even without any texture, the visual fidelity of the model is clearly on display. 
+  </p>
+<img class="centered_img" src="../Media/Renders/Tiger_1/Tiger_1_Progress_02.png" alt="Tiger 1 Front">
+  <p class="centered_p" style="color:rgb(199, 199, 199)">
+    The stenciled numbers visible within some renders are created by user zolee from onlygfx while the variously scattered rations and tins are textured from photographs of seemingly surviving period examples, posted by users VolksJager and Glenn66 on the War Relics Forum. 
+    Other miscellaneous textures - such as the concrete ballast floor and a loose document - courtesy of textures.com. 
+  </p>
+<model-viewer style="width: 60%; position: relative; margin-left: 20%" src="../Media/Assets/Tiger_1_Tracks.glb" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" camera-orbit="763.5deg 52.1deg 0.5848m" field-of-view="30deg">
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
     </div>
 </model-viewer>
+</div>
 
-<img class="centered_img" src="../Media/Renders/Tiger 1/Tiger_1_Progress_02.png" alt="Tiger 1 Front">
+<br>
+  <hr style="width:75%; height: 5px; border-width: 0; background-color: rgb(0, 0, 0);">
+<br>
 
-<footer>
-  <p class="footerText">Alexander Soprych © 2026</p>
-  <p class="footerText">This is a portfolio, not an advertiser's data siphon. NO cookies!</p>
-</footer>
+<section class="comparisonSection">
+  <div class="comparisonImage beforeImage">
+    <picture>
+	    <source media="(max-width: 720px)" srcset="../Media/Renders/Tiger_1/Tiger_1_Poster">
+	    <img src="../Media/Renders/Tiger_1/Tiger_1_Progress_01.png" alt="Normal">
+	  </picture>
+  </div>
+  <div class="comparisonImage afterImage">
+	  <picture>
+	    <source media="(max-width: 720px)" srcset="../Media/Renders/Tiger_1/Tiger_1_Poster">
+      <img src="../Media/Renders/Tiger_1/Tiger_1_Progress_Wireframe_01.png" alt="Wireframe">
+	  </picture>
+  </div>
+</section>
+
+<!-- Footer //-->
+
+<footer id="footer"></footer>
+
+<script src="../Scripts/repeatingElements.js"></script>
 
 </body>
 
-<!-- Model Viewer Script //-->
+<script>
+gsap.utils.toArray(".comparisonSection").forEach(section => {
+	let tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: section,
+				start: "center center",
+				end: () => "+=" + section.offsetWidth,
+				scrub: true,
+				pin: true,
+        		anticipatePin: 1
+			},
+			defaults: {ease: "none"}
+		});
+	tl.fromTo(section.querySelector(".afterImage"), { xPercent: 100, x: 0}, {xPercent: 0})
+	  .fromTo(section.querySelector(".afterImage img"), {xPercent: -100, x: 0}, {xPercent: 0}, 0);
+});
 
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+</script>
+
+<!-- Modelviewer Loading Bar //-->
+
+<script>
+const modelViewer = document.querySelector('model-viewer');
+
+const onProgress = (event) => {
+  const progressBar = event.target.querySelector('.progress-bar');
+  const updatingBar = event.target.querySelector('.update-bar');
+
+  if (event.detail.totalProgress === 0) {
+    progressBar.style.display = 'flex';
+    updatingBar.style.width = '0%';
+  } else {
+    updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
+
+    if (event.detail.totalProgress === 1) {
+      setTimeout(() => {
+        progressBar.style.display = 'none';
+      }, 500);
+    }
+  }
+};
+
+modelViewer.addEventListener('progress', onProgress);
+
+</script>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Alexander Soprych | Portfolio</title>
+  <link rel="icon" href="../Media/Icons/Personal_Favicon.svg">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Footer Font //-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap">
+
+</head>
+
+<!-- GSAP Libraries //-->
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+
+<style>
+.welcome-container{
+width:100%;
+}
+.personalTitle {
+color: rgb(240, 175, 75);
+font-size: 10vw;
+text-align: left;
+position: relative;
+/*font-family: monaco, Consolas, "Lucida Console", monospace;*/
+font-family: "Pixelify Sans", sans-serif;
+user-select: none;
+margin: 0;
+left: 2vh;
+top: 10px;
+z-index: 1;
+}
+.personalTitleLower {
+color: black;
+font-size: 5vw;
+text-align: right;
+position: relative;
+/*font-family: monaco, Consolas, "Lucida Console", monospace;*/
+font-family: "Pixelify Sans", sans-serif;
+user-select: none;
+margin-top: 5vh;
+right: 2vh;
+z-index: 2;
+}
+.panel picture,
+.panel picture img {
+  display: block;
+}
+.panelTitle{
+  writing-mode: vertical-lr;
+  width: fit-content;
+  text-align: left;
+  font-size: 2vw;
+}
+@media screen and (max-width : 720px) {
+ img{max-height: 100%; width: auto;}
+}
+</style>
+<body>
+
+<section class="panel">
+  <div class="welcome-container">
+    <h1 class="personalTitle">3D Generalist</h1>
+    <h3 class="personalTitleLower">
+      Modeling<br>
+      3D Printing<br>
+      Photogrammetry<br>
+    </h3>
+    <p>
+      I'm a 3D modeler, designer, painter, and writer who's passionate about history and using digital art as a medium for modern storytelling. 
+      My program of choice is Blender - with over 1,500 hours spent working within and teaching it - though I am also proficient in the architectural design software Rhinoceros, the game engines Unity and Unreal 4, as well as Photoshop and the 2D pixel art software Aseprite. 
+      You can view some of my hand-picked work below; I am very proud of everything that you'll see. 
+    </p>
+    <hr style="width:75%; height: 5px; border-width: 0; background-color: rgb(240, 175, 75);">
+  </div>
+</section>
+
+<!-- Header //-->
+
+<div class="header" id="signatureMenu"></div>
+
+<!-- Main Image Showcase //-->
+
+<!-- Tiger 1 (WIP) //-->
+
+<section class="panel initial">
+  <a href="../Pages/Tiger.html"><h1 class="panelTitle">Pz.Kpfw Tiger 1</h1></a>
+  <picture>
+	  <source media="(max-width: 720px)"srcset="../Media/Renders/Roman_Multitool/RM_Mobile.png">
+	    <img src="../Media/Renders/Tiger_1/Tiger_1_Progress_01.png" alt="Tiger 1">
+	</picture>
+</section>
+
+<!-- A7V //-->
+
+<section class="panel">
+  <a href="../Pages/A7V.html"><h1 class="panelTitle">Sturmpanzerwagen<br>A7V</h1></a>
+  <picture>
+	  <source media="(max-width: 720px)"srcset="../Media/Renders/Roman_Multitool/RM_Mobile.png">
+	    <img src="../Media/Renders/A7V_Final_Side_Angle.png" alt="A7V">
+	</picture>
+</section>
+
+<!-- Roman Multitool //-->
+
+<section class="panel">
+  <a href="../Pages/RomanMultitool.html"><h1 class="panelTitle">Roman Multitool</h1></a>
+  <picture>
+	  <source media="(max-width: 720px)"srcset="../Media/Renders/Roman_Multitool/RM_Mobile.png">
+	    <img src="../Media/Renders/Roman_Multitool/RM_04.png" alt="Roman Multitool">
+	</picture>
+</section>
+
+<!-- Rettungsboje //-->
+
+<section class="panel">
+  <a href="../Pages/Rettungsboje.html"><h1 class="panelTitle">Rettungsboje</h1></a>
+  <video id = "Rettungsboje_Animated_Scene" muted autoplay loop playsinLine>
+    <source src="../Media/Videos/Rettungsboje_Animated.mp4" type="video/mp4">
+  </video>
+</section>
+
+<!-- Królik Apollo //-->
+
+<section class="panel">
+  <a href="../Pages/Królik_Home.html"><h1 class="panelTitle">Królik Apollo</h1></a>
+  <video id = "Królik_Ad_Shortened" muted autoplay loop playsinLine>
+    <source src="../Media/Videos/Królik_Portfolio_Web_Short.mp4" type="video/mp4">
+  </video>
+</section>
+
+<!-- Kowloon Walled City //-->
+
+<!--
+<section class="panel">
+  <a href="../Pages/DesertTigers.html"><h1 class="panelTitle">Walled City<br>Kowloon</h1></a>
+  <picture>
+	  <source media="(max-width: 720px)"srcset="../Media/Renders/Desert_Tigers/Desert_Tigers_Mobile.png">
+      <img src="../Media/Renders/Kowloon_Walled_City_01.png" alt="Desert Tigers">
+	</picture>
+</section>
+//-->
+
+<!-- Desert Tigers //-->
+
+<section class="panel">
+  <a href="../Pages/DesertTigers.html"><h1 class="panelTitle">Desert Tigers</h1></a>
+  <picture>
+	  <source media="(max-width: 720px)"srcset="../Media/Renders/Desert_Tigers/Desert_Tigers_Mobile.png">
+      <img src="../Media/Renders/Desert_Tigers/Desert_Tigers_02.png" alt="Desert Tigers">
+	</picture>
+</section>
+
+<!-- Footer //-->
+
+<footer id="footer"></footer>
+
+<script src="../Scripts/repeatingElements.js"></script>
+
+</body>
+
+<!-- GSAP Scrolltrigger Scripts //-->
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+let panels = gsap.utils.toArray(".panel");
+let tops = panels.map(panel => ScrollTrigger.create({trigger: panel, start: "top top"}));
+
+panels.forEach((panel, i) =>
+{
+  ScrollTrigger.create
+  ({
+    trigger: panel,
+    start: () => panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom",
+    markers: false,
+    pin: i === panels.length -1 ? false : true, 
+    end:"bottom 100",
+    pinSpacing: false 
+  });
+});
+
+ScrollTrigger.create
+({
+  snap:
+  {
+    snapTo: (progress, self) => 
+    {
+      let panelStarts = tops.map(st => st.start),
+          snapScroll = gsap.utils.snap(panelStarts, self.scroll());
+      return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll);
+    },
+    duration: 2.5
+  }
+});
+</script>
+
+<!-- Header Color Change Script //-->
+
+<script>
+var hh = document.querySelector(".header").offsetHeight;
+
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".header",
+    start: "top top",
+    invalidateOnRefresh: true,
+    pin: false,
+    pinSpacing: false
+  }
+});
+
+gsap.fromTo(
+  ".textWhite",
+  {
+    clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)"
+  },
+  {
+    scrollTrigger: {
+      trigger: ".initial",
+      scrub: true,
+
+      start: () => "top top+=" + document.querySelector(".header").offsetHeight,
+      end: () => '+=' + document.querySelector(".header").offsetHeight,
+      
+      id: "text-white",
+      markers: false,
+      invalidateOnRefresh: true
+    },
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    ease: 'none'
+  }
+);
+
+</script>
+
+<!-- Video Changing Script //-->
+
+<script>
+window.onload = (event) => {videoChange()};
+
+function videoChange()
+{
+ let adaptivevideo = document.getElementById("Królik_Ad_Shortened");
+
+ if (screen.width > 720) {adaptivevideo.src = "../Media/Videos/Królik_Portfolio_Web_Short.mp4";}
+ if (screen.width <= 720) {adaptivevideo.src = "../Media/Videos/Królik_Commercial_Final_Version_1.mp4";}
+
+ adaptivevideo.load();
+}
+
+</script>

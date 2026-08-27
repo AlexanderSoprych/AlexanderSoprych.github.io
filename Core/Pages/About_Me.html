@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About Myself | Alexander Soprych</title>
+  <link rel="icon" href="../Media/Icons/Personal_Favicon.svg">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Footer Font //-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap">
+
+</head>
+
+<!-- GSAP Libraries //-->
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+
+<style>
+.bottomButton {
+  background-color: white;
+  color: black;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+  font-size: 2vw;
+  padding: 12px;
+  border: 5px solid rgb(240, 175, 75);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: 0;
+  cursor: pointer;
+  width: 250px;
+}
+
+.bottomButton:hover {
+  background: rgb(240, 175, 75);
+  color: white;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.section {
+  background: white;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.items {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  list-style: none;
+}
+
+.item {
+  min-width: 50vh;
+  height: 75vh;
+  position: relative;
+  background: none;
+  margin-top: 12vh;
+  margin-right: 20vh;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+}
+.bookCover {
+  height: 100%;
+  box-shadow: 7.5px 7.5px 20px black;
+  z-index: 1;
+}
+
+.gameCover {
+  height: 100%;
+  box-shadow: 7.5px 7.5px 20px black;
+  z-index: 1;
+}
+.playTime {
+  position: absolute;
+  text-align: center;
+  background-color: rgb(61, 68, 80);
+  color: white;
+  font-size: 4vh;
+  width: 55%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 7.5px;
+  margin-bottom: -2.5%;
+  margin-left: 25%;
+  margin-right: 25%;
+  bottom: 0;
+  z-index: 2;
+}
+</style>
+
+<body>
+
+<!-- Header //-->
+
+<div class="header" id="signatureMenu"></div>
+
+<img src="../Media/Icons/Personal_Favicon.svg" style="height: 10vw; float: left; margin-left: 2%;">
+
+<p style="font-family: Pixelify Sans, sans-serif;">
+Hey, thank you so very much for checking out my work. As you can see this page is still under construction - as I'm not sure how best to present myself. 
+For now, you'll find a list of the programs I am proficient in as well as what I am passionate about. 
+<br>
+<br>
+A brief message about ownership,
+<br>
+<br>
+This is my website and every element you see has been chosen solely by me. Though I have consulted with Claude in regards to squashing bugs and fixing small coding problems, the layout you see was solely done by myself with inspiration taken from <a href="https://axellepasquier.com/" style="color: rgb(240, 175, 75)">Axelle Pasquier</a> as well as <a href="https://www.youtube.com/watch?v=3QSb5lSh9Kc" style="color: rgb(240, 175, 75)">Anderson Mancini</a>. 
+Likewise, all of my showcased work is just that, my own; done by hand by myself with zero AI generated content anywhere. External sources for image textures are cited on their respective pages. 
+GSAP code has been sourced either directly from GSAP's own demo pages or from their forums. 
+</p>
+
+<div class="bottomnavMenu">
+  <button class="bottomButton">Games</button>
+  <button class="bottomButton">Books</button>
+  <button class="bottomButton">Ownership</button>
+</div>
+
+<div class="page-wrapper">
+
+<section class="section">
+  <div class="container">
+    <ul class="items scrollx-section">
+      <li class="item"><img class="bookCover" src="https://covers.openlibrary.org/b/isbn/9781837730216-L.jpg" alt="What's Cooking in the Kremlin"></li>
+      <li class="item"><img class="bookCover" src="https://covers.openlibrary.org/b/isbn/9781538725429-L.jpg" alt="Play Nice"></li>
+      <li class="item"><img class="bookCover" src="https://covers.openlibrary.org/b/isbn/9781452179049-L.jpg" alt="Mythos"></li>
+      <li class="item"><img class="bookCover" src="https://covers.openlibrary.org/b/isbn/9780190673062-L.jpg" alt="Fifth Sun"></li>      
+      <li class="item"><img class="bookCover" src="https://covers.openlibrary.org/b/isbn/9780300273618-L.jpg" alt="How Finland Survived Stalin"></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <ul class="items scrollx-section">
+      <li class="item">
+        <img class="gameCover" src="https://cdn.akamai.steamstatic.com/steam/apps/8930/library_600x900_2x.jpg" alt="Civilization V">
+        <h2 class="playTime">180.3 hours</h2>
+      </li>
+      <li class="item">
+        <img class="gameCover" src="https://cdn.akamai.steamstatic.com/steam/apps/1245620/library_600x900_2x.jpg" alt="Elden Ring">
+        <h2 class="playTime">158.8 hours</h2>
+      </li>
+      <li class="item">
+        <img class="gameCover" src="https://cdn.akamai.steamstatic.com/steam/apps/255710/library_600x900_2x.jpg" alt="Cities Skylines">
+        <h2 class="playTime">93 hours</h2>
+      </li>
+      <li class="item">
+        <img class="gameCover" src="https://cdn.akamai.steamstatic.com/steam/apps/289070/library_600x900_2x.jpg" alt="Civilization VI">
+        <h2 class="playTime">69 hours</h2>
+      </li>
+      <li class="item">
+        <img class="gameCover" src="https://cdn.akamai.steamstatic.com/steam/apps/1363080/library_600x900_2x.jpg" alt="Manor Lords">
+        <h2 class="playTime">20 hours</h2>
+      </li>
+    </ul>
+  </div>
+</section>
+
+</div>
+
+<!-- Footer //-->
+
+<footer id="footer"></footer>
+
+<script src="../Scripts/repeatingElements.js"></script>
+
+</body>
+
+<script>
+let items = gsap.utils.toArray(".items"),
+  pageWrapper = document.querySelector(".page-wrapper");
+
+items.forEach((container, i) => {
+  let localItems = container.querySelectorAll(".item"),
+      distance = () => {
+        let lastItemBounds = localItems[localItems.length-1].getBoundingClientRect(),
+            containerBounds = container.getBoundingClientRect();
+        return Math.max(0, lastItemBounds.right - containerBounds.right);
+      };
+  gsap.to(container, {
+    x: () => -distance(), // make sure it dynamically calculates things so that it adjusts to resizes
+    ease: "none",
+    scrollTrigger: {
+      trigger: container,
+      start: "top top",
+      pinnedContainer: pageWrapper,
+      end: () => "+=" + distance(),
+      pin: pageWrapper,
+      scrub: true,
+      invalidateOnRefresh: true // will recalculate any function-based tween values on resize/refresh (making it responsive)
+    }
+  })
+});
+</script>

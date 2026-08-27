@@ -2,32 +2,40 @@
 <html lang="en">
 <head>
   <title>Ruttungsboje | Alexander Soprych</title>
-  <link rel="icon" href="../Media/Icons/new_alpha_icon.png">
+  <link rel="icon" href="../Media/Icons/Personal_Favicon.svg">
   <link rel="stylesheet" href="CSS/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Footer Font //-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap">
+
+<!-- Model Viewer Script //-->
+
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+
 </head>
+
+<!-- GSAP Libraries //-->
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+
 <style>
-.hero {
-background-color: rgb(205, 200, 100);
-}
-.backgroundTitle{
-color: rgb(160, 70, 45);
-}
-.informationalText {
-color: rgb(128, 124, 62);
-}
-.instructionalText {
-color: rgb(26, 26, 26);
-}
-img {max-width: 100%; height: auto;}
+  .hero {background-color: rgb(205, 200, 100);}
+  .backgroundTitle {color: rgb(160, 70, 45);}
+  .informationalText {color: rgb(128, 124, 62);}
+  .instructionalText {color: rgb(26, 26, 26);}
 </style>
 <body>
 
 <!-- 3D Hero //-->
 
 <div class="hero">
-  <model-viewer src="../Media/Assets/Desert_Tigers_Test.glb" camera-controls tone-mapping="neutral" poster="../Media/Renders/Rettungsboje/Rettungsboje_1_Poster.png" shadow-intensity="1.25" exposure="1" shadow-softness="1" camera-orbit="40deg 70deg 22.5m" field-of-view="25deg">
-    <div class="progress-bar hide" slot="progress-bar">
+  <model-viewer src="../Media/Assets/Rettungsboje_Baked.glb" camera-controls tone-mapping="neutral" poster="../Media/Renders/Rettungsboje/Rettungsboje_1_Poster.png" shadow-intensity="1" camera-orbit="-130deg 75deg 26m" field-of-view="25deg" camera-target="auto 1m auto">
+    <div class="progress-bar" slot="progress-bar">
       <div class="update-bar"></div>
     </div>
   </model-viewer>
@@ -38,42 +46,29 @@ img {max-width: 100%; height: auto;}
 
 <!-- Header //-->
 
-<div class="header" id="signatureMenu">
-  <h2>
-    <a href="../Pages/OLD/index.html"><span class="textWhite">Alexander Soprych</span></a> 
-    <a href="../Pages/OLD/index.html"><span class="textBlack">Alexander Soprych</span></a>
-  </h2>
-  <div>
-    <h2 class="navMenu">
-      <a href="../Pages/OLD/index.html"><span class="textWhite">Projects</span></a>
-      <a href="../Pages/OLD/index.html"><span class="textBlack">Projects</span></a>
-    </h2>
-    <h2 class="navMenu">
-      <a href="../Pages/OLD/index.html"><span class="textWhite">Contact</span></a>
-      <a href="../Pages/OLD/index.html"><span class="textBlack">Contact</span></a>
-    </h2>
-  </div>
-</div>
+<div class="header" id="signatureMenu"></div>
 
 <br>
 
 <div>
   <p class="centered_p">
-    This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
-    A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
+    A truly self-contained space recreated as convincingly as possible - for an historical artifact that no longer exists - through the interpretation of various sources: photographic, secondary diagrams, and other 3D models. 
+    Some artistic liberty has of course been taken in its recreation. 
   </p>
 <img class="centered_img" src="../Media/Renders/Rettungsboje/Rettungsboje_11.png" alt="Rettungsboje Interior">
   <p class="centered_p">
-    This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
-    A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
+    This tiny shelter is rife with details alluding to larger events having or have-yet to unfold; it's these small elements that I absolutely love thinking about while atttempting environmental storytelling. 
+    Though spartan in space-alottment and general comfort, as a survival shelter is generally want, the space is no less stocked with the barest of essentials for spending a night or two. 
   </p>
 <img class="centered_img" src="../Media/Renders/Rettungsboje/Rettungsboje_10.png" alt="Rettungsboje Interior Roof">
   <p class="centered_p">
-    This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
-    A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
+    The stenciled numbers visible on some renders are created by user zolee from onlygfx while the variously scattered rations and tins are textured from photographs of seemingly surviving period examples, posted by users VolksJager and Glenn66 on the War Relics Forum. 
+    Other miscellaneous textures - such as the concrete ballast floor and a loose document - courtesy of textures.com. 
   </p>
 </div>
 
+<br>
+  <hr style="width:75%; height: 5px; border-width: 0; background-color: rgb(160, 70, 45);">
 <br>
 
 <section class="comparisonSection">
@@ -85,23 +80,19 @@ img {max-width: 100%; height: auto;}
   </div>
   <div class="comparisonImage afterImage">
 	  <picture>
-	    <source media="(max-width: 720px)" srcset="../Media/Renders/Rettungsboje/Rettungsboje_1_Mobile.png">
+	    <source media="(max-width: 720px)" srcset="../Media/Renders/Rettungsboje/Rettungsboje_Wireframe_Mobile.png">
       <img src="../Media/Renders/Rettungsboje/Rettungsboje_Wireframe.png" alt="Wireframe">
 	  </picture>
   </div>
 </section>
 
-<footer>
-  <p class="footerText">Alexander Soprych © 2026</p>
-  <p class="footerText">This is a portfolio, not an advertiser's data siphon. NO cookies!</p>
-</footer>
+<!-- Footer //-->
+
+<footer id="footer"></footer>
+
+<script src="../Scripts/repeatingElements.js"></script>
 
 </body>
-
-<!-- GSAP Libraries //-->
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
 
 <!-- GSAP Scripts //-->
 
@@ -123,16 +114,6 @@ gsap.utils.toArray(".comparisonSection").forEach(section => {
 });
 
 </script>
-
-<!-- Model Viewer Script //-->
-
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
-
-<!-- GSAP Libraries //-->
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
 
 <script>
 var hh = document.querySelector(".header").offsetHeight;
@@ -168,5 +149,36 @@ gsap.fromTo(
     ease: 'none'
   }
 );
+
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
+
+</script>
+
+<!-- Modelviewer Loading Bar //-->
+
+<script>
+const modelViewer = document.querySelector('model-viewer');
+
+const onProgress = (event) => {
+  const progressBar = event.target.querySelector('.progress-bar');
+  const updatingBar = event.target.querySelector('.update-bar');
+
+  if (event.detail.totalProgress === 0) {
+    progressBar.style.display = 'flex';
+    updatingBar.style.width = '0%';
+  } else {
+    updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
+
+    if (event.detail.totalProgress === 1) {
+      setTimeout(() => {
+        progressBar.style.display = 'none';
+      }, 500);
+    }
+  }
+};
+
+modelViewer.addEventListener('progress', onProgress);
 
 </script>

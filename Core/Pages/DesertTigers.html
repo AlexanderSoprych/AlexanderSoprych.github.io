@@ -2,31 +2,40 @@
 <html lang="en">
 <head>
   <title>Desert Tigers | Alexander Soprych</title>
-  <link rel="icon" href="../Media/Icons/new_alpha_icon.png">
+  <link rel="icon" href="../Media/Icons/Personal_Favicon.svg">
   <link rel="stylesheet" href="CSS/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Footer Font //-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap">
+
+<!-- Model Viewer Script //-->
+
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+
 </head>
+
+<!-- GSAP Libraries //-->
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+
 <style>
-.hero {
-background-color: rgb(190, 135, 82);
-}
-.backgroundTitle{
-color: rgb(85, 62, 35);
-}
-.informationalText {
-color: rgb(145, 100, 60);
-}
-.instructionalText {
-color: seashell;
-}
+  .hero {background-color: rgb(190, 135, 82);}
+  .backgroundTitle {color: rgb(85, 62, 35);}
+  .informationalText {color: rgb(145, 100, 60);}
+  .instructionalText {color: seashell;}
 </style>
 <body>
 
 <!-- 3D Hero //-->
 
 <div class="hero">
-  <model-viewer src="../Media/Assets/Desert_Tigers_Pre_Bake.glb" camera-controls tone-mapping="neutral" poster="../Media/Renders/Desert_Tigers/Desert_Tigers_Poster.png" shadow-intensity="1.25" exposure="1" shadow-softness="1" camera-orbit="40deg 70deg 22.5m" field-of-view="25deg">
-    <div class="progress-bar hide" slot="progress-bar">
+  <model-viewer src="../Media/Assets/Desert_Tigers_Baked.glb" camera-controls tone-mapping="neutral" poster="../Media/Renders/Desert_Tigers/Desert_Tigers_Poster.png" shadow-intensity="1" camera-orbit="45deg 65deg 20m" field-of-view="45deg" camera-target="auto -1m auto">
+    <div class="progress-bar" slot="progress-bar">
       <div class="update-bar"></div>
     </div>
   </model-viewer>
@@ -37,46 +46,35 @@ color: seashell;
 
 <!-- Header //-->
 
-<div class="header" id="signatureMenu">
-  <h2>
-    <a href="../Pages/OLD/index.html"><span class="textWhite">Alexander Soprych</span></a> 
-    <a href="../Pages/OLD/index.html"><span class="textBlack">Alexander Soprych</span></a>
-  </h2>
-  <div>
-    <h2 class="navMenu">
-      <a href="../Pages/OLD/index.html"><span class="textWhite">Projects</span></a>
-      <a href="../Pages/OLD/index.html"><span class="textBlack">Projects</span></a>
-    </h2>
-    <h2 class="navMenu">
-      <a href="../Pages/OLD/index.html"><span class="textWhite">Contact</span></a>
-      <a href="../Pages/OLD/index.html"><span class="textBlack">Contact</span></a>
-    </h2>
-  </div>
-</div>
+<div class="header" id="signatureMenu"></div>
 
 <br>
 
 <div>
   <p class="centered_p">
-    This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
+    This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.
     A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
   </p>
 <img class="centered_img" src="../Media/Renders/Desert_Tigers/Low_Poly_Tiger_1_Transparent_01.png" alt="Tiger 1 Front"> 
   <p class="centered_p">
-    This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
-    A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
+    Instead of using actual materials, I allude to texture through the way in which the rough cubic geometry reacts with the scene's lighting as well as more simply by the solid block colors chosen for each shape.
+    There is a heat conveyed through the scene that is hopefully evocative of the Tunisian desert. 
   </p>
 <img class="centered_img" src="../Media/Renders/Desert_Tigers/Low_Poly_Tiger_1_Transparent_02.png" alt="Tiger 1 Rear">
   <p class="centered_p">
-    This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
-    A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
+    It is surprising how well intricately detailed objects can be simplfied while still retaining their original recognizability.
+    I dare not pretend to have wholly abstracted the Tiger 1, but instead in reducing its surfaces to a limited color palette, have produced a toy-like - or even game-like - result. 
   </p>
-<model-viewer style="width: 60%; position: relative; margin-left: 20%" src="../Media/Assets/Low_Poly_Tiger_1.glb" camera-controls tone-mapping="neutral" poster="../Media/Renders/Desert_Tigers/Low_Poly_Tiger_1_Transparent_01.png" shadow-intensity="1.25" exposure="1" shadow-softness="1" camera-orbit="40deg 70deg 10m" field-of-view="35deg">
-  <div class="progress-bar hide" slot="progress-bar">
+<model-viewer style="width: 50%; position: relative; margin-left: 25vw;" src="../Media/Assets/Low_Poly_Tiger_1.glb" camera-controls tone-mapping="neutral" poster="../Media/Renders/Desert_Tigers/Low_Poly_Tiger_1_Transparent_01.png" shadow-intensity="1.25" exposure="1" shadow-softness="1" camera-orbit="40deg 70deg 10m" field-of-view="35deg">
+  <div class="progress-bar" slot="progress-bar">
     <div class="update-bar"></div>
   </div>
 </model-viewer>
 </div>
+
+<br>
+  <hr style="width:75%; height: 5px; border-width: 0; background-color: rgb(85, 62, 35);">
+<br>
 
 <section class="comparisonSection">
   <div class="comparisonImage beforeImage">
@@ -93,17 +91,13 @@ color: seashell;
   </div>
 </section>
 
-<footer>
-  <p class="footerText">Alexander Soprych © 2026</p>
-  <p class="footerText">This is a portfolio, not an advertiser's data siphon. NO cookies!</p>
-</footer>
+<!-- Footer //-->
+
+<footer id="footer"></footer>
+
+<script src="../Scripts/repeatingElements.js"></script>
 
 </body>
-
-<!-- GSAP Libraries //-->
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
 
 <!-- GSAP Scripts //-->
 
@@ -116,7 +110,7 @@ gsap.utils.toArray(".comparisonSection").forEach(section => {
 				end: () => "+=" + section.offsetWidth,
 				scrub: true,
 				pin: true,
-        		anticipatePin: 1
+        		anticipatePin: 1,
 			},
 			defaults: {ease: "none"}
 		});
@@ -125,16 +119,6 @@ gsap.utils.toArray(".comparisonSection").forEach(section => {
 });
 
 </script>
-
-<!-- Model Viewer Script //-->
-
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
-
-<!-- GSAP Libraries //-->
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
 
 <script>
 var hh = document.querySelector(".header").offsetHeight;
@@ -170,5 +154,36 @@ gsap.fromTo(
     ease: 'none'
   }
 );
+
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
+
+</script>
+
+<!-- Modelviewer Loading Bar //-->
+
+<script>
+const modelViewer = document.querySelector('model-viewer');
+
+const onProgress = (event) => {
+  const progressBar = event.target.querySelector('.progress-bar');
+  const updatingBar = event.target.querySelector('.update-bar');
+
+  if (event.detail.totalProgress === 0) {
+    progressBar.style.display = 'flex';
+    updatingBar.style.width = '0%';
+  } else {
+    updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
+
+    if (event.detail.totalProgress === 1) {
+      setTimeout(() => {
+        progressBar.style.display = 'none';
+      }, 500);
+    }
+  }
+};
+
+modelViewer.addEventListener('progress', onProgress);
 
 </script>

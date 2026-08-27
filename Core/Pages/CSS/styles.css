@@ -38,39 +38,42 @@ section {
   height: 20vw;
 }
 .hero {
-width: 100%;
-height: 80vh;
-display: flex;
+  width: 100%;
+  height: 80vh;
+  display: flex;
 }
 .backgroundTitle{
-font-size: 7.5vw;
-text-align: left;
-position: absolute;
-margin: 0;
-left: 2vh;
-top: 10px;
-z-index: 0;
+  font-size: 7.5vw;
+  text-align: left;
+  position: absolute;
+  user-select: none;
+  margin: 0;
+  left: 2vh;
+  top: 10px;
+  z-index: 0;
 }
 .informationalText {
-font-size: 2.5vw;
-text-align: right;
-position: absolute;
-font-family: monaco, Consolas, "Lucida Console", monospace;
-padding-right: 1vw;
-margin-left: 60vw;
-top: 0;
-z-index: 0;
+  font-size: 2.5vw;
+  text-align: right;
+  position: absolute;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+  user-select: none;
+  padding-right: 1vw;
+  margin-left: 60vw;
+  top: 0;
+  z-index: 0;
 }
 .instructionalText {
-font-size: .75vw;
-text-align: right;
-position: absolute;
-font-family: monaco, Consolas, "Lucida Console", monospace;
-padding-right: .5vw;
-left: 87.5vw;
-top: 70vh;
-margin: 0;
-z-index: 2;
+  font-size: .75vw;
+  text-align: right;
+  position: absolute;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+  user-select: none;
+  padding-right: .5vw;
+  left: 87.5vw;
+  top: 70vh;
+  margin: 0;
+  z-index: 0;
 }
 model-viewer {
   width: 100%;
@@ -102,28 +105,32 @@ p {
   text-align: left;
   margin-left: 2%;
   font-family: monaco, Consolas, "Lucida Console", monospace;
-  font-size: 1.75vw;
+  user-select: none;
+  font-size: 1.5vw;
   z-index: 1;
 }
 .centered_p {
   margin-top: 0;
-  margin-left: 20vw; 
-  margin-right: 20vw;
+  margin-left: 25vw; 
+  margin-right: 25vw;
   margin-bottom: 0;
 }
 footer {
+  bottom: 0;
   display: flex;
   justify-content: center;
-  background: rgb(225, 145, 50);
+  background: rgb(240, 175, 75);
+  /*background: rgb(225, 145, 50);*/
   /*background: linear-gradient(rgb(42, 123, 155) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);*/
   z-index: 1;
 }
 .footerText {
   font-size: 1.5vw;
   color: white;
-  margin: 50px;
+  margin: 6vh;
   display: flex;
-  justify-content: space-between;
+  /*text-shadow: 2px 2px #af7e37;*/
+  font-family: "Pixelify Sans", sans-serif;
 }
 .navMenu {
   margin: 0;
@@ -132,10 +139,38 @@ footer {
   display: inline-block;
 }
 
-.comparisonSection {position: relative; padding-bottom: 56.25%;}
+.bottomnavMenu {
+  overflow: hidden;
+  background-color: none;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  gap: 2vw;
+}
 
-.comparisonImage {width: 100%; height: 100%;}
+.comparisonSection {position: relative; width: 100%; aspect-ratio: 16/9; /*padding-bottom: 56.25%;*/}
 
+.comparisonImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.comparisonImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /*position: absolute;
+  top: 0;*/
+}
+.comparisonImage picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
 .afterImage {
   position: absolute;
   overflow: hidden;
@@ -144,18 +179,34 @@ footer {
 }
 .afterImage img {transform: translate(-100%, 0px);}
 
-.comparisonImage img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-}
 img {max-width: 100%; height: auto;}
+
 .centered_img {
-  width: 60%; 
+  width: 50%; 
   display: block; 
   margin: auto;
 }
+
+.progress-bar {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 0.75vw;
+  background: rgba(25, 25, 25, 0.15);
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.update-bar {
+  height: 100%;
+  background: rgb(75, 75, 75, 0.75);
+  transition: width 0.1s ease;
+  border-radius: 10px;
+}
+
 video {max-width: 100%; height: auto;}
 body {margin: 0; padding: 0; max-width: 100%; overflow-x: hidden;}
 body::-webkit-scrollbar {display: none;}
@@ -163,4 +214,6 @@ body::-webkit-scrollbar {display: none;}
   .backgroundTitle{font-size: 50px;}
   .informationalText {font-size: 2vh; margin-left: 25vw; left: 1vw; top: 7.5%;}
   .instructionalText {font-size: 1vh; left: 60vw; right: 10px;}
+  .comparisonSection{aspect-ratio: 9/16;}
+  .footerText{font-size: 2vw;}
 }

@@ -2,32 +2,43 @@
 <html lang="en">
 <head>
   <title>Sturmpanzerwagen A7V | Alexander Soprych</title>
-  <link rel="icon" href="../Media/Icons/new_alpha_icon.png">
+  <link rel="icon" href="../Media/Icons/Personal_Favicon.svg">
   <link rel="stylesheet" href="CSS/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Footer Font //-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap">
+
+<!-- Model Viewer Script //-->
+
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+
 </head>
+
+<!-- GSAP Libraries //-->
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+
 <style>
-.hero {
-background-color: rgb(105, 52, 52);
-}
-.backgroundTitle{
-/*color: rgb(56, 105, 52);*/
-color: rgb(52, 105, 85);
-}
-.informationalText {
-color: rgb(190, 182, 158);
-}
-.instructionalText {
-color: seashell;
-}
+  .hero {background-color: rgb(105, 52, 52);}
+  .backgroundTitle {color: #4E6655;/*color: rgb(56, 105, 52);*/}
+  .informationalText {
+    color: #D9C8A3;
+    margin-left: 70vw;
+  }
+  .instructionalText {color: seashell;}
 </style>
 <body>
 
 <!-- 3D Hero //-->
 
 <div class="hero">
-  <model-viewer src="../Media/Assets/Desert_Tigers_Pre_Bake.glb" camera-controls tone-mapping="neutral" poster="../Media/Renders/Desert_Tigers/Desert_Tigers_Poster.png" shadow-intensity="1.25" exposure="1" shadow-softness="1" camera-orbit="40deg 70deg 22.5m" field-of-view="25deg">
-    <div class="progress-bar hide" slot="progress-bar">
+  <model-viewer src="../Media/Assets/A7V.glb" camera-controls tone-mapping="neutral" poster="../Media/Renders/Desert_Tigers/Desert_Tigers_Poster.png" shadow-intensity="1.25" exposure="1" shadow-softness="1" camera-orbit="40deg 70deg 22.5m" field-of-view="25deg">
+    <div class="progress-bar" slot="progress-bar">
       <div class="update-bar"></div>
     </div>
   </model-viewer>
@@ -38,73 +49,52 @@ color: seashell;
 
 <!-- Header //-->
 
-<div class="header" id="signatureMenu">
-  <h2>
-    <a href="../Pages/OLD/index.html"><span class="textWhite">Alexander Soprych</span></a> 
-    <a href="../Pages/OLD/index.html"><span class="textBlack">Alexander Soprych</span></a>
-  </h2>
-  <div>
-    <h2 class="navMenu">
-      <a href="../Pages/OLD/index.html"><span class="textWhite">Projects</span></a>
-      <a href="../Pages/OLD/index.html"><span class="textBlack">Projects</span></a>
-    </h2>
-    <h2 class="navMenu">
-      <a href="../Pages/OLD/index.html"><span class="textWhite">Contact</span></a>
-      <a href="../Pages/OLD/index.html"><span class="textBlack">Contact</span></a>
-    </h2>
-  </div>
-</div>
+<div class="header" id="signatureMenu"></div>
 
 <br>
 
 <div>
   <p class="centered_p">
-    This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
-    A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
+    For what is essentially an up-armored tractor, the A7V evokes a no less striking sight. For me, part of the fun inherent in modeling is getting to research and learn all the minutiae about my subject matter.
+    Did you know that the German Empire employed more captured British armor than all the A7V's ever produced?  
   </p>
-<img class="centered_img" src="../Media/Renders/Desert_Tigers/Low_Poly_Tiger_1_Transparent_01.png" alt="Tiger 1 Front"> 
+<img class="centered_img" src="../Media/Renders/A7V/A7V_Orbit_01.webp" alt="A7V 01"> 
   <p class="centered_p">
-    This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
-    A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
+    The designers somehow developed a machine more cramped and overall unwieldy than their adversaires could; which when looking at Britain's efforts is truly an achievement. 
+    This beast's high height and proportionally low width certainly didn't help matters, what with its propensity to comically tip over when wading through uneven ground. 
+
   </p>
-<img class="centered_img" src="../Media/Renders/Desert_Tigers/Low_Poly_Tiger_1_Transparent_02.png" alt="Tiger 1 Rear">
+<img class="centered_img" src="../Media/Renders/A7V/A7V_Orbit_02.webp" alt="A7V 02">
   <p class="centered_p">
-    This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
-    A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
+    Though I clearly possess a bias for modeling highly detailed machinery, that does not preclude me from branching out into other subject matter. 
+    There's a certain challenge inherent in maintaining a cohesive geometric shape while also layering on details and camouflage. 
   </p>
-<model-viewer style="width: 60%; position: relative; margin-left: 20%" src="../Media/Assets/Low_Poly_Tiger_1.glb" camera-controls tone-mapping="neutral" poster="../Media/Renders/Desert_Tigers/Low_Poly_Tiger_1_Transparent_01.png" shadow-intensity="1.25" exposure="1" shadow-softness="1" camera-orbit="40deg 70deg 10m" field-of-view="35deg">
-  <div class="progress-bar hide" slot="progress-bar">
-    <div class="update-bar"></div>
-  </div>
-</model-viewer>
 </div>
+
+<br>
 
 <section class="comparisonSection">
   <div class="comparisonImage beforeImage">
     <picture>
-	    <source media="(max-width: 720px)" srcset="../Media/Renders/Desert_Tigers/Desert_Tigers_Mobile.png">
-	    <img src="../Media/Renders/Desert_Tigers/Desert_Tigers_01.png" alt="Normal">
+	    <source media="(max-width: 720px)" srcset="../Media/Renders/A7V/A7V_Mobile_01.png">
+	    <img src="../Media/Renders/A7V/A7V_01.png" alt="Normal">
 	  </picture>
   </div>
   <div class="comparisonImage afterImage">
 	  <picture>
-	    <source media="(max-width: 720px)" srcset="../Media/Renders/Desert_Tigers/Desert_Tigers_Mobile_Wireframe.png">
-      <img src="../Media/Renders/Desert_Tigers/Desert_Tigers_Wireframe.png" alt="Wireframe">
+	    <source media="(max-width: 720px)" srcset="../Media/Renders/A7V/A7V_Mobile_Wireframe.webp">
+      <img src="../Media/Renders/A7V/A7V_Wireframe.webp" alt="Wireframe">
 	  </picture>
   </div>
 </section>
 
-<footer>
-  <p class="footerText">Alexander Soprych © 2020</p>
-  <p class="footerText">This is a portfolio, not an advertiser's data siphon. NO cookies!</p>
-</footer>
+<!-- Footer //-->
+
+<footer id="footer"></footer>
+
+<script src="../Scripts/repeatingElements.js"></script>
 
 </body>
-
-<!-- GSAP Libraries //-->
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
 
 <!-- GSAP Scripts //-->
 
@@ -126,16 +116,6 @@ gsap.utils.toArray(".comparisonSection").forEach(section => {
 });
 
 </script>
-
-<!-- Model Viewer Script //-->
-
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
-
-<!-- GSAP Libraries //-->
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
 
 <script>
 var hh = document.querySelector(".header").offsetHeight;
@@ -164,12 +144,16 @@ gsap.fromTo(
       end: () => '+=' + document.querySelector(".header").offsetHeight,
       
       id: "text-white",
-      markers: true,
+      markers: false,
       invalidateOnRefresh: true
     },
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
     ease: 'none'
   }
 );
+
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
 
 </script>

@@ -2,31 +2,39 @@
 <html lang="en">
 <head>
   <title>Roman Multitool | Alexander Soprych</title>
-  <link rel="icon" href="../Media/Icons/new_alpha_icon.png">
+  <link rel="icon" href="../Media/Icons/Personal_Favicon.svg">
   <link rel="stylesheet" href="CSS/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Footer Font //-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap">
+
+<!-- Model Viewer Script //-->
+
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+
 </head>
+
+<!-- GSAP Libraries //-->
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+
 <style>
-.hero {
-background-color: rgb(90, 115, 85);
-}
-.backgroundTitle{
-color: rgb(50, 65, 50);
-}
-.informationalText {
-color: rgb(69, 84, 62);
-}
-.instructionalText {
-color: rgb(212, 212, 212);
-}
-img {max-width: 100%; height: auto;}
+  .hero {background-color: rgb(90, 115, 85);}
+  .backgroundTitle {color: rgb(50, 65, 50);}
+  .informationalText {color: rgb(69, 84, 62);}
+  .instructionalText {color: rgb(212, 212, 212);}
 </style>
 <body>
 
 <!-- 3D Hero //-->
 
 <div class="hero">
-  <model-viewer src="../Media/Assets/Desert_Tigers_Test.glb" camera-controls tone-mapping="neutral" poster="../Media/Renders/Roman_Multitool/RM_Poster.png" shadow-intensity="1.25" exposure="1" shadow-softness="1" camera-orbit="40deg 70deg 22.5m" field-of-view="25deg">
+  <model-viewer src="../Media/Assets/Roman_Multi_Tool.glb" camera-controls tone-mapping="neutral" poster="../Media/Renders/Roman_Multitool/RM_Poster.png" shadow-intensity="1" camera-orbit="25deg 75deg 10m" field-of-view="25deg" camera-target="0.75m 0.45m 0.2m">
     <div class="progress-bar hide" slot="progress-bar">
       <div class="update-bar"></div>
     </div>
@@ -38,70 +46,53 @@ img {max-width: 100%; height: auto;}
 
 <!-- Header //-->
 
-<div class="header" id="signatureMenu">
-  <h2>
-    <a href="../Pages/OLD/index.html"><span class="textWhite">Alexander Soprych</span></a> 
-    <a href="../Pages/OLD/index.html"><span class="textBlack">Alexander Soprych</span></a>
-  </h2>
-  <div>
-    <h2 class="navMenu">
-      <a href="../Pages/OLD/index.html"><span class="textWhite">Projects</span></a>
-      <a href="../Pages/OLD/index.html"><span class="textBlack">Projects</span></a>
-    </h2>
-    <h2 class="navMenu">
-      <a href="../Pages/OLD/index.html"><span class="textWhite">Contact</span></a>
-      <a href="../Pages/OLD/index.html"><span class="textBlack">Contact</span></a>
-    </h2>
-  </div>
-</div>
+<div class="header" id="signatureMenu"></div>
 
 <br>
 
 <div>
   <p class="centered_p">
-    This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
-    A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
+    When for a class project we were tasked with creating "cutlery", I set out to find the most esoteric example I could.
+    This authentic ancient oddity - residing within the Fitzwilliam Museum - looks almost anachronistic when imagined in its original setting.
   </p>
 <img class="centered_img" src="../Media/Renders/Roman_Multitool/RM_02.png" alt="Rettungsboje Interior">
   <p class="centered_p">
-    This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
-    A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
+    More broadly, this piece showcases my ability to convincingly recreate artifacts from only a small handful of freely available photographs. 
+    Care has been taken to enable all parts to move and fold realistically, making sure the geometry doesn't clip or otherwise impede animate-ability. 
   </p>
 <img class="centered_img" src="../Media/Renders/Roman_Multitool/RM_03.png" alt="Rettungsboje Interior Roof">
   <p class="centered_p">
-    This work demonstrates my ability to render a stylized scene convincingly through the purposeful choice of mood-setting colors. The already boxy Tiger 1 lends itself perfectly to such a low-poly rendering.<br>
-    A lower-poly 3D scene demonstrating how just the proper use of color can evoke feeling irrespective of texture quality.
+    I deliterately chose to showcase this piece as if it were sitting in a museum display instead of in a Roman home as such a curiosity would truly seem unrealistically modern in its "intended" period. 
+    Ultimately, this head-turner offers a glimpse into what innovations humanity needed two millennia ago; not too dissimilar to tools still in-vogue today. 
   </p>
 </div>
 
+<br>
+  <hr style="width:75%; height: 5px; border-width: 0; background-color: rgb(50, 65, 50);">
 <br>
 
 <section class="comparisonSection">
   <div class="comparisonImage beforeImage">
     <picture>
-	    <source media="(max-width: 720px)" srcset="../Media/Renders/Rettungsboje/Rettungsboje_1_Mobile.png">
+	    <source media="(max-width: 720px)" srcset="../Media/Renders/Roman_Multitool/RM_Mobile.png">
 	    <img src="../Media/Renders/Roman_Multitool/RM_01.png" alt="Normal">
 	  </picture>
   </div>
   <div class="comparisonImage afterImage">
 	  <picture>
-	    <source media="(max-width: 720px)" srcset="../Media/Renders/Rettungsboje/Rettungsboje_1_Mobile.png">
+	    <source media="(max-width: 720px)" srcset="../Media/Renders/Roman_Multitool/RM_Mobile_Wireframe.png">
       <img src="../Media/Renders/Roman_Multitool/RM_Wireframe.png" alt="Wireframe">
 	  </picture>
   </div>
 </section>
 
-<footer>
-  <p class="footerText">Alexander Soprych © 2026</p>
-  <p class="footerText">This is a portfolio, not an advertiser's data siphon. NO cookies!</p>
-</footer>
+<!-- Footer //-->
+
+<footer id="footer"></footer>
+
+<script src="../Scripts/repeatingElements.js"></script>
 
 </body>
-
-<!-- GSAP Libraries //-->
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
 
 <!-- GSAP Scripts //-->
 
@@ -123,16 +114,6 @@ gsap.utils.toArray(".comparisonSection").forEach(section => {
 });
 
 </script>
-
-<!-- Model Viewer Script //-->
-
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
-
-<!-- GSAP Libraries //-->
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
 
 <script>
 var hh = document.querySelector(".header").offsetHeight;
@@ -161,12 +142,43 @@ gsap.fromTo(
       end: () => '+=' + document.querySelector(".header").offsetHeight,
       
       id: "text-white",
-      markers: true,
+      markers: false,
       invalidateOnRefresh: true
     },
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
     ease: 'none'
   }
 );
+
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
+
+</script>
+
+<!-- Modelviewer Loading Bar //-->
+
+<script>
+const modelViewer = document.querySelector('model-viewer');
+
+const onProgress = (event) => {
+  const progressBar = event.target.querySelector('.progress-bar');
+  const updatingBar = event.target.querySelector('.update-bar');
+
+  if (event.detail.totalProgress === 0) {
+    progressBar.style.display = 'flex';
+    updatingBar.style.width = '0%';
+  } else {
+    updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
+
+    if (event.detail.totalProgress === 1) {
+      setTimeout(() => {
+        progressBar.style.display = 'none';
+      }, 500);
+    }
+  }
+};
+
+modelViewer.addEventListener('progress', onProgress);
 
 </script>
