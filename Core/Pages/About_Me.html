@@ -27,74 +27,17 @@
   font-size: 2vw;
   padding: 12px;
   border: 5px solid rgb(240, 175, 75);
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border-bottom: 0;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top: 0;
   cursor: pointer;
   width: 250px;
 }
-
 .bottomButton:hover {
   background: rgb(240, 175, 75);
   color: white;
-}
-
-.container {
-  width: 90%;
-  margin: 0 auto;
-}
-.section {
-  background: white;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.items {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  list-style: none;
-}
-
-.item {
-  min-width: 50vh;
-  height: 75vh;
-  position: relative;
-  background: none;
-  margin-top: 12vh;
-  margin-right: 20vh;
-  text-align: center;
-  font-size: 24px;
-  color: white;
-}
-.bookCover {
-  height: 100%;
-  box-shadow: 7.5px 7.5px 20px black;
-  z-index: 1;
-}
-
-.gameCover {
-  height: 100%;
-  box-shadow: 7.5px 7.5px 20px black;
-  z-index: 1;
-}
-.playTime {
-  position: absolute;
-  text-align: center;
-  background-color: rgb(61, 68, 80);
-  color: white;
-  font-size: 4vh;
-  width: 55%;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  border-radius: 7.5px;
-  margin-bottom: -2.5%;
-  margin-left: 25%;
-  margin-right: 25%;
-  bottom: 0;
-  z-index: 2;
 }
 </style>
 
@@ -104,44 +47,62 @@
 
 <div class="header" id="signatureMenu"></div>
 
-<img src="../Media/Icons/Personal_Favicon.svg" style="height: 10vw; float: left; margin-left: 2%;">
+<img src="../Media/Icons/Personal_Favicon.svg" style="height: 10vw; float: left; margin-left: 10%;">
 
-<p style="font-family: Pixelify Sans, sans-serif;">
-Hey, thank you so very much for checking out my work. As you can see this page is still under construction - as I'm not sure how best to present myself. 
-For now, you'll find a list of the programs I am proficient in as well as what I am passionate about. 
-<br>
-<br>
-A brief message about ownership,
-<br>
-<br>
-This is my website and every element you see has been chosen solely by me. Though I have consulted with Claude in regards to squashing bugs and fixing small coding problems, the layout you see was solely done by myself with inspiration taken from <a href="https://axellepasquier.com/" style="color: rgb(240, 175, 75)">Axelle Pasquier</a> as well as <a href="https://www.youtube.com/watch?v=3QSb5lSh9Kc" style="color: rgb(240, 175, 75)">Anderson Mancini</a>. 
-Likewise, all of my showcased work is just that, my own; done by hand by myself with zero AI generated content anywhere. External sources for image textures are cited on their respective pages. 
-GSAP code has been sourced either directly from GSAP's own demo pages or from their forums. 
+<p class="centered_p_80">
+Hey, thank you so very much for taking the time to look at my work.
+Even though parts of this portfolio are still under construction, I do hope that the projects shown have conveyed both my varied skillset along with my passion for 3D modeling. 
+As for showcasing myself more personally, that's what this page is for! Besides digital and traditional art, my two favorite escapes are reading and gaming. <br><br>
 </p>
 
-<div class="bottomnavMenu">
-  <button class="bottomButton">Games</button>
-  <button class="bottomButton">Books</button>
-  <button class="bottomButton">Ownership</button>
-</div>
+<!-- Scrollable Lists //-->
 
 <div class="page-wrapper">
+
+<hr style="width:75%; height: 5px; border-width: 0; background-color: rgb(240, 175, 75);">
+
+<br>
+
+<!-- Books //-->
+
+<p class="centered_p_80">
+  Put simply, I'm such an avid reader that I've had to condense the following list to only some of my recently finished books:
+</p>
 
 <section class="section">
   <div class="container">
     <ul class="items scrollx-section">
-      <li class="item"><img class="bookCover" src="https://covers.openlibrary.org/b/isbn/9781837730216-L.jpg" alt="What's Cooking in the Kremlin"></li>
-      <li class="item"><img class="bookCover" src="https://covers.openlibrary.org/b/isbn/9781538725429-L.jpg" alt="Play Nice"></li>
-      <li class="item"><img class="bookCover" src="https://covers.openlibrary.org/b/isbn/9781452179049-L.jpg" alt="Mythos"></li>
-      <li class="item"><img class="bookCover" src="https://covers.openlibrary.org/b/isbn/9780190673062-L.jpg" alt="Fifth Sun"></li>      
-      <li class="item"><img class="bookCover" src="https://covers.openlibrary.org/b/isbn/9780300273618-L.jpg" alt="How Finland Survived Stalin"></li>
+      <!-- <li class="item"><img class="bookCover" src="https://m.media-amazon.com/images/I/81SsiCIE5yL._SL1500_.jpg" alt="Blood and Oil"></li> //-->
+      <li class="item"><img class="bookCover" src="https://m.media-amazon.com/images/I/71iNGmnZmAL._SL1500_.jpg" alt="What's Cooking in the Kremlin"></li>
+      <li class="item"><img class="bookCover" src="https://m.media-amazon.com/images/I/81EiCb1ZWGL._SL1500_.jpg" alt="Play Nice"></li>
+      <li class="item"><img class="bookCover" src="https://m.media-amazon.com/images/I/91I+MIa1FQL._SL1500_.jpg" alt="Philip and Alexander"></li>
+      <li class="item"><img class="bookCover" src="https://m.media-amazon.com/images/I/71vbl8UoHKL._SL1500_.jpg" alt="Troy"></li>
+      <li class="item"><img class="bookCover" src="https://m.media-amazon.com/images/I/81KQaf2TJoL._SL1500_.jpg" alt="Heroes"></li>
+      <li class="item"><img class="bookCover" src="https://m.media-amazon.com/images/I/81PYI+VQduL._SL1500_.jpg" alt="Mythos"></li>
+      <li class="item"><img class="bookCover" src="https://m.media-amazon.com/images/I/71kwtkbQjkL._SL1500_.jpg" alt="Fifth Sun"></li>      
+      <li class="item"><img class="bookCover" src="https://m.media-amazon.com/images/I/71gDUgXDjDL._SL1000_.jpg" alt="How Finland Survived Stalin"></li>
     </ul>
   </div>
 </section>
 
+<p class="attributionText">Images Courtesy of Amazon</p>
+<hr style="width:75%; height: 5px; border-width: 0; background-color: rgb(240, 175, 75);">
+
+<br>
+
+<!-- Games //-->
+
+<p class="centered_p_80">
+  Gaming has been a part of my life for almost as long as I can remember. My preferences, therefore, are quite broad, though the following curated list should provide a near-complete picture; and hopefully positively reflect my tastes:
+</p>
+
 <section class="section">
   <div class="container">
     <ul class="items scrollx-section">
+      <li class="item">
+        <img class="gameCover" src="https://cdn.akamai.steamstatic.com/steam/apps/201270/library_600x900_2x.jpg" alt="Total War: Shogun 2">
+        <h2 class="playTime">260 hours</h2>
+      </li>
       <li class="item">
         <img class="gameCover" src="https://cdn.akamai.steamstatic.com/steam/apps/8930/library_600x900_2x.jpg" alt="Civilization V">
         <h2 class="playTime">180.3 hours</h2>
@@ -152,7 +113,11 @@ GSAP code has been sourced either directly from GSAP's own demo pages or from th
       </li>
       <li class="item">
         <img class="gameCover" src="https://cdn.akamai.steamstatic.com/steam/apps/255710/library_600x900_2x.jpg" alt="Cities Skylines">
-        <h2 class="playTime">93 hours</h2>
+        <h2 class="playTime">107.6 hours</h2>
+      </li>
+      <li class="item">
+        <img class="gameCover" src="https://cdn.akamai.steamstatic.com/steam/apps/212680/library_600x900_2x.jpg" alt="FTL">
+        <h2 class="playTime">75 hours</h2>
       </li>
       <li class="item">
         <img class="gameCover" src="https://cdn.akamai.steamstatic.com/steam/apps/289070/library_600x900_2x.jpg" alt="Civilization VI">
@@ -162,11 +127,30 @@ GSAP code has been sourced either directly from GSAP's own demo pages or from th
         <img class="gameCover" src="https://cdn.akamai.steamstatic.com/steam/apps/1363080/library_600x900_2x.jpg" alt="Manor Lords">
         <h2 class="playTime">20 hours</h2>
       </li>
+      <li class="item">
+        <img class="gameCover" src="https://cdn.akamai.steamstatic.com/steam/apps/731040/library_600x900_2x.jpg" alt="The Invincible">
+        <h2 class="playTime">12 hours</h2>
+      </li>
     </ul>
   </div>
 </section>
 
+<p class="attributionText">Images Courtesy of Steam</p>
+<hr style="width:75%; height: 5px; border-width: 0; background-color: rgb(240, 175, 75);">
+
 </div>
+
+<br>
+<br>
+
+<p class="centered_p_80">
+  To conclude, a brief message about ownership,
+  <br><br>
+  This is my website and every element you see has been chosen solely by me. Though I have consulted with Claude in regards to squashing bugs and resolving certain coding problems, the layout you see was solely done by myself with inspiration taken from <a href="https://axellepasquier.com/" style="color: rgb(240, 175, 75)">Axelle Pasquier</a> as well as <a href="https://www.youtube.com/watch?v=3QSb5lSh9Kc" style="color: rgb(240, 175, 75)">Anderson Mancini</a>. 
+  Likewise, all of my showcased work is just that, my own; done by hand by myself with zero AI generated content appearing in the models or renders. External sources for image textures are cited on their respective pages. 
+  GSAP code has been sourced either directly from GSAP's own demo pages or from their forums. 
+  <br><br>
+</p>
 
 <!-- Footer //-->
 
@@ -175,6 +159,8 @@ GSAP code has been sourced either directly from GSAP's own demo pages or from th
 <script src="../Scripts/repeatingElements.js"></script>
 
 </body>
+
+<!-- List-Scroll Script //-->
 
 <script>
 let items = gsap.utils.toArray(".items"),
@@ -188,7 +174,7 @@ items.forEach((container, i) => {
         return Math.max(0, lastItemBounds.right - containerBounds.right);
       };
   gsap.to(container, {
-    x: () => -distance(), // make sure it dynamically calculates things so that it adjusts to resizes
+    x: () => -distance(),
     ease: "none",
     scrollTrigger: {
       trigger: container,
@@ -197,7 +183,7 @@ items.forEach((container, i) => {
       end: () => "+=" + distance(),
       pin: pageWrapper,
       scrub: true,
-      invalidateOnRefresh: true // will recalculate any function-based tween values on resize/refresh (making it responsive)
+      invalidateOnRefresh: true
     }
   })
 });

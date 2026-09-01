@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Projects | Alexander Soprych</title>
+  <link rel="icon" href="../Media/Icons/Personal_Favicon.svg">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Footer Font //-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap">
+
+</head>
+
+<!-- GSAP Libraries //-->
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+
+<style>
+.projectImage {
+  height: 75%;
+  box-shadow: 7.5px 7.5px 20px black;
+  margin-right: 0;
+  z-index: 1;
+}
+.itemTitle {
+  min-width: 20%;
+  height: 75vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: none;
+  margin-top: 12vh;
+  margin-right: 15vh;
+  text-align: center;
+  box-shadow: 7.5px 7.5px 20px black;
+  z-index: 1;
+}
+.itemTitleText {
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+  user-select: none;
+  text-align: left;
+  padding: 5%;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 3vh;
+  color: white;
+}
+.itemDescriptionText {
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+  user-select: none;
+  text-align: right;
+  padding: 5%;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 2vh;
+  color: white;
+}
+.itemAttributionText {
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+  font-style: italic;
+  user-select: none;
+  text-align: left;
+  margin-top: auto;
+  padding: 5%;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 2vh;
+  color: white;
+}
+</style>
+<body>
+
+<!-- Header //-->
+
+<div class="header" id="signatureMenu"></div>
+
+<p class="centered_p_80">
+  This page showcases my game development & 3D printing - related projects - or else ones not exclusively 3D modeling-based. 
+  The design and overall layout are not final, though the works on display are. 
+  I have much experience in Unity - having even taught it - along with Unreal Engine 4 and am also currently learning Godot.
+  <br>
+  <br>
+</p>
+
+<hr style="width:75%; height: 5px; border-width: 0; background-color: rgb(240, 175, 75);">
+
+<!-- Project List //-->
+
+<div class="page-wrapper">
+
+<!-- Project List //-->
+
+<section class="section">
+  <div class="container">
+    <ul class="items scrollx-section">
+      <li class="itemTitle" style="background-color: rgb(228, 141, 12);">
+        <p class="itemTitleText">ESP32 Remote Controller</p>
+          <hr style="width:75%; height: 5px; border-width: 0; background-color: white;">
+          <br>
+        <p class="itemDescriptionText">Modeled in Blender & Printed with Bambu Lab A1 Mini</p>
+        <p class="itemAttributionText">Done in collaboration with Lucas Martins Celeiro</p>
+      </li>
+      <li class="itemProject"><img class="projectImage" src="../Media/Pictures/Ohjain_01.jpg" alt="Supertank Controller"></li>
+      <li class="itemProject"><img class="projectImage" src="../Media/Pictures/Ohjain_02.jpg" alt="Supertank Controller"></li>
+      <li class="itemProject"><img class="projectImage" src="../Media/Pictures/Ohjain_03.jpg" alt="Supertank Controller"></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Kowloon Walled City //-->
+
+<section class="section">
+  <div class="container">
+    <ul class="items scrollx-section">
+      <li class="itemTitle" style="background-color: rgb(238, 28, 37);">
+        <p class="itemTitleText">Kowloon Walled City<br>九龍城寨</p>
+          <hr style="width:75%; height: 5px; border-width: 0; background-color: white;">
+          <br>
+        <p class="itemDescriptionText">Unreal Engine 4 w/assets created in Blender</p>
+      </li>
+      <li class="itemProject"><img class="projectImage" src="../Media/Renders/Kowloon Walled City/Kowloon_Walled_City_01.png" alt="Kowloon Walled City"></li>
+      <li class="itemProject"><img class="projectImage" src="../Media/Renders/Kowloon Walled City/Kowloon_Walled_City_02.png" alt="Kowloon Walled City"></li>
+      <li class="itemProject"><img class="projectImage" src="../Media/Renders/Kowloon Walled City/Kowloon_Walled_City_03.png" alt="Kowloon Walled City"></li>
+      <li class="itemProject"><img class="projectImage" src="../Media/Renders/Kowloon Walled City/Kowloon_Walled_City_04.png" alt="Kowloon Walled City"></li>
+      <li class="itemProject"><img class="projectImage" src="../Media/Renders/Kowloon Walled City/Kowloon_Walled_City_05.png" alt="Kowloon Walled City"></li>
+    </ul>
+  </div>
+</section>
+
+</div>
+
+<hr style="width:75%; height: 5px; border-width: 0; background-color: rgb(240, 175, 75);">
+
+
+
+<!-- Footer //-->
+
+<footer id="footer"></footer>
+
+<script src="../Scripts/repeatingElements.js"></script>
+
+</body>
+
+<!-- List-Scroll Script //-->
+
+<script>
+let items = gsap.utils.toArray(".items"),
+  pageWrapper = document.querySelector(".page-wrapper");
+
+items.forEach((container, i) => {
+  let localItems = container.querySelectorAll(".itemProject"),
+      distance = () => {
+        let lastItemBounds = localItems[localItems.length-1].getBoundingClientRect(),
+            containerBounds = container.getBoundingClientRect();
+        return Math.max(0, lastItemBounds.right - containerBounds.right);
+      };
+  gsap.to(container, {
+    x: () => -distance(),
+    ease: "none",
+    scrollTrigger: {
+      trigger: container,
+      start: "top top",
+      pinnedContainer: pageWrapper,
+      end: () => "+=" + distance(),
+      pin: pageWrapper,
+      scrub: true,
+      invalidateOnRefresh: true
+    }
+  })
+});
+</script>
