@@ -158,7 +158,8 @@ footer {
 }
 .footerText {
   font-size: 1.5vw;
-  color: white;
+  color: #2e3b46;
+  /*color: #252F38;*/
   margin: 6vh;
   display: flex;
   /*text-shadow: 2px 2px #af7e37;*/
